@@ -2,8 +2,184 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Проект</title>
+    <title>Техномарт</title>
   </head>
-  <body>
+  <body class="catalog-page">
+    <header class="main-header">
+      <div class="main-header__middle-column">
+        <h1 class="main-header__page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="main-header__header-feedback header-feedback">
+          <span class="header-feedback__phone-number">+7 (812) 555-05-55</span>
+          <p class="header-feedback__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="main-header__user-navigation">
+          <li class="main-header__user-navigation-item">
+            <div class="main-header__user-profile">
+              <input class="main-header__user-avatar" type="file">Фотография пользователя</input>
+              <p class="main-header__user-name">Дима Кувалда</p>
+              <button class="main-header__profile-exit" type="button">Выход из профиля</button>
+              <ul class="main-header__user-profile-list">
+                <li class="main-header__user-profile-item">
+                  <a class="main-header__user-profile-link" href="#">Мои заказы</a>
+                </li>
+                <li class="main-header__user-profile-item">
+                  <a class="main-header__user-profile-link" href="#">Личный кабинет</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="main-header__top-column">
+        <div class="main-header__logo-block">
+          <a class="main-header__logo-link" href="index.html">Техномарт</a>
+        </div>
+        <div class="main-header__search-block">
+          <input class="main-header__search-field" type="search" placeholder="Поиск">
+        </div>
+        <div class="main-header__bookmarks-block">
+          <p class="main-header__bookmarks-text">Закладки <span class="main-header__bookmarks-counter">0</span></p>
+        </div>
+        <div class="main-header__cart-block">
+          <p class="main-header__cart-text">Корзина <span class="main-header__cart-counter">10</span></p>
+        </div>
+        <div class="main-header__buy-block">
+          <a class="main-header__buy-button" href="#">Оформить заказ</a>
+        </div>
+      </div>
+      <div class="main-header__bottom-column">
+        <nav class="main-navigation">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Компания</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--current">
+              <a class="main-navigation__link">Каталог</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Новости</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Спецпредложение</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Инструмент</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Перфораторы</a>
+        </li>
+      </ul>
+      <h2 class="page-title">Перфораторы</h2>
+      <div class="catalog-settings">
+        <div class="setup-header">
+          <span class="setup-header__title">Фильтр:</span>
+        </div>
+        <form class="setup-product">
+          <fieldset class="setup-product__range-block">
+            <legend class="setup-product__group-title">Цена:</legend>
+            <input type="range">
+            <div class="setup-product__range-value-container">
+              <div class="setup-product__range-min-value">
+                0
+              </div>
+              <div class="setup-product__range-max-value">
+                30000
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__top-column">
+        <div class="main-footer__logo-block">
+          <a class="main-footer__logo-link">Техномарт</a>
+        </div>
+        <nav class="footer-navigation main-footer__footer-navigation">
+          <ul class="footer-navigation__list">
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Компания</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Новости</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Каталог</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-footer__middle-column">
+        <p class="main-footer__office-location">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            +7 (812) 555-05-55
+        </p>
+        <ul class="main-footer__product-navigation">
+          <li class="main-footer__navigation-item">
+            <a class="main-footer__navigation-link" href="#">Материалы</a>
+          </li>
+          <li class="main-footer__navigation-item">
+            <a class="main-footer__navigation-link" href="#">Техника</a>
+          </li>
+          <li class="main-footer__navigation-item">
+            <a class="main-footer__navigation-link" href="#">Инструмент</a>
+          </li>
+          <li class="main-footer__navigation-item">
+            <a class="main-footer__navigation-link" href="#">Спецпредложения</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__bottom-column">
+        <p class="main-footer__copyright">
+            © 2010–2019 Компания «Техномарт»
+            Все права защищены
+        </p>
+        <ul class="main-footer__social-list">
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link main-footer__social-link--vk" href="#">Наша группа в контакте</a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link main-footer__social-link--facebook" href="#">Наша группа в фейсбуке</a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link main-footer__social-link--instagram" href="#">Наша группа в инстаграме</a>
+          </li>
+        </ul>
+        <div class="main-footer__developers">
+          <p class="main-footer__developers-feedback">
+              Обратная связь:
+              <span class="main-footer__developer-name">mail@htmlacademy.ru</span>
+          </p>
+          <p class="main-footer__developers-cutaway">
+              Разработано —
+              <span class="main-footer__developer-name">htmlacademy.ru</span>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
