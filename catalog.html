@@ -89,58 +89,214 @@
       </ul>
       <h2 class="page-title">Перфораторы</h2>
       <div class="catalog-settings">
-        <div class="setup-header">
-          <span class="setup-header__title">Фильтр:</span>
+        <div class="setup">
+          <div class="setup-header">
+            <span class="setup-header__title">Фильтр:</span>
+          </div>
+          <form class="setup-product">
+            <fieldset class="setup-product__range-block">
+              <legend class="setup-product__group-title">Цена:</legend>
+              <input type="range">
+              <div class="setup-product__range-value-container">
+                <div class="setup-product__range-min-value">
+                  0
+                </div>
+                <div class="setup-product__range-max-value">
+                  30000
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="setup-product__makers-block">
+              <legend class="setup-product__group-title">Производители:</legend>
+              <p class="setup-product__makers-item">
+                <label for="bosch">Bosch</label>
+                <input class="setup-product__makers-field" type="checkbox" id="bosch" checked>
+              </p>
+              <p class="setup-product__makers-item">
+                <label for="интерскол">Интерскол</label>
+                <input class="setup-product__makers-field" type="checkbox" id="интерскол">
+              </p>
+              <p class="setup-product__makers-item">
+                <label for="makita">Makita</label>
+                <input class="setup-product__makers-field" type="checkbox" id="makita" checked>
+              </p>
+              <p class="setup-product__makers-item">
+                <label for="makita">Dewalt</label>
+                <input class="setup-product__makers-field" type="checkbox" id="dewalt">
+              </p>
+              <p class="setup-product__makers-item">
+                <label for="hitachi">Hitachi</label>
+                <input class="setup-product__makers-field" type="checkbox" id="hitachi">
+              </p>
+            </fieldset>
+            <fieldset class="setup-product__charge-type">
+              <legend class="setup-product__group-title">Питание:</legend>
+              <p class="setup-product__charge-item">
+                <label for="storage-battery">Аккумуляторные</label>
+                <input class="setup-product__charge-field" type="radio" name="charge-type" value="storage-battery" id="storage-battery">
+              </p>
+              <p class="setup-product__charge-item">
+                <label for="network-charging">Сетевые</label>
+                <input class="setup-product__charge-field" type="radio" name="charge-type" value="network-charging" id="network-charging">
+              </p>
+            </fieldset>
+            <button class="setup-product__button-show">Показать</button>
+          </form>
         </div>
-        <form class="setup-product">
-          <fieldset class="setup-product__range-block">
-            <legend class="setup-product__group-title">Цена:</legend>
-            <input type="range">
-            <div class="setup-product__range-value-container">
-              <div class="setup-product__range-min-value">
-                0
-              </div>
-              <div class="setup-product__range-max-value">
-                30000
-              </div>
+        <section class="sort-block">
+          <h2 class="visually-hidden">Сортировка товаров</h2>
+          <header class="sort-block__sort-panel">
+            <h3 class="sort-block__panel-title">Сортировка:</h3>
+            <ul class="sort-block__sort-type-list">
+              <li class="sort-block__sort-type-item">
+                <a class="sort-block__sort-type-link" href="#">По цене</a>
+              </li>
+              <li class="sort-block__sort-type-item">
+                <a class="sort-block__sort-type-link" href="#">По типу</a>
+              </li>
+              <li class="sort-block__sort-type-item">
+                <a class="sort-block__sort-type-link" href="#">По типу</a>
+              </li>
+            </ul>
+            <div class="sort-block__sort-buttons">
+              <a class="sort-block__sort-button-up" href="#">Сортировака товаров по возрастанию</a>
+              <a class="sort-block__sort-button-bottom" href="#">Сортировака товаров по уменьшению</a>
             </div>
-          </fieldset>
-          <fieldset class="setup-product__makers-block">
-            <legend class="setup-product__group-title">Производители:</legend>
-            <p class="setup-product__makers-item">
-              <label for="bosch">Bosch</label>
-              <input class="setup-product__makers-field" type="checkbox" id="bosch" checked>
-            </p>
-            <p class="setup-product__makers-item">
-              <label for="интерскол">Интерскол</label>
-              <input class="setup-product__makers-field" type="checkbox" id="интерскол">
-            </p>
-            <p class="setup-product__makers-item">
-              <label for="makita">Makita</label>
-              <input class="setup-product__makers-field" type="checkbox" id="makita" checked>
-            </p>
-            <p class="setup-product__makers-item">
-              <label for="makita">Dewalt</label>
-              <input class="setup-product__makers-field" type="checkbox" id="dewalt">
-            </p>
-            <p class="setup-product__makers-item">
-              <label for="hitachi">Hitachi</label>
-              <input class="setup-product__makers-field" type="checkbox" id="hitachi">
-            </p>
-          </fieldset>
-          <fieldset class="setup-product__charge-type">
-            <legend class="setup-product__group-title">Питание:</legend>
-            <p class="setup-product__charge-item">
-              <label for="storage-battery">Аккумуляторные</label>
-              <input class="setup-product__charge-field" type="radio" name="charge-type" value="storage-battery" id="storage-battery">
-            </p>
-            <p class="setup-product__charge-item">
-              <label for="network-charging">Сетевые</label>
-              <input class="setup-product__charge-field" type="radio" name="charge-type" value="network-charging" id="network-charging">
-            </p>
-          </fieldset>
-          <button class="setup-product__button-show">Показать</button>
-        </form>
+          </header>
+          <section class="product-line sort-block__product-line">
+            <ul class="product-line__product-list">
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 3000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 3000
+                  </p>
+                  <p class="item-card__old-price">
+                    22500 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    15500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 6000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 6000
+                  </p>
+                  <p class="item-card__old-price">
+                    30500 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    25500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 2000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 2000
+                  </p>
+                  <p class="item-card__old-price"></p>
+                  <p class="item-card__current-price">
+                    12500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 3000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 3000
+                  </p>
+                  <p class="item-card__old-price">
+                    2250 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    15500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 6000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 6000
+                  </p>
+                  <p class="item-card__old-price">
+                    30500 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    25500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 2000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 2000
+                  </p>
+                  <p class="item-card__old-price"></p>
+                  <p class="item-card__current-price">
+                    12500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 3000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 3000
+                  </p>
+                  <p class="item-card__old-price">
+                    22500 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    15500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 6000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 6000
+                  </p>
+                  <p class="item-card__old-price">
+                    30500 Р.
+                  </p>
+                  <p class="item-card__current-price">
+                    25500 Р.
+                  </p>
+                </article>
+              </li>
+              <li class="product-line__product-item">
+                <article class="item-card product-line__item-card">
+                  <img class="item-card__product-image" src="#" alt="Перфоратор BOSCH BFG 2000">
+                  <p class="item-card__product-description">
+                    Перфоратор BOSCH
+                    BFG 2000
+                  </p>
+                  <p class="item-card__old-price"></p>
+                  <p class="item-card__current-price">
+                    15500 Р.
+                  </p>
+                </article>
+              </li>
+            </ul>
+          </section>
+        </section>
       </div>
     </main>
     <footer class="main-footer">
