@@ -142,6 +142,16 @@ a {
 
 /* стилизация основного содержания */
 
+.material-category__title,
+.tools-category__title,
+.machinery-category__title,
+.discounts-category__title,
+.delivery-category__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
 .material-category {
   background-color: #ffbf47;
 }
@@ -171,4 +181,40 @@ a {
 
 /* Стилизация слайдера */
 
+.product-slider__slide-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: gray; /*временно */
+}
 
+.product-slider__slide-slogan {
+  font-size: 18px;
+  line-height: 24px;
+  color: gray; /*временно */
+}
+
+.product-slider__slide-link {
+  color: #ffffff; /*необходимая персональная стилизация ссылки */
+  background-color: #ee3643;
+}
+
+/* Стилизация слайдера */
+
+.discounts-category {
+  background-color: #8ed78f;
+}
+
+.discounts-category__link {
+  color: #ffffff;
+  background-color: #80c180;
+}
+
+.delivery-category {
+  background-color: #ffc047;
+}
+
+.delivery-category__link {
+  color: #ffffff;
+  background-color: #e5ac40;
+}
