@@ -1,3 +1,4 @@
+/* Общая стилизация */
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprum.woff2") format("woff2"),
@@ -49,7 +50,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -59,6 +60,8 @@ body {
 a {
   text-decoration: none;
 }
+
+/* стилизация шапки */
 
 .main-header {
   background-color: #f3f7f9;
@@ -99,6 +102,13 @@ a {
   background-color: #293449;
 }
 
+.main-header__search-field::placeholder { /* Персональная стилизация подписи в поле-поиска*/
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+
 .main-header__logo-block {
   background-color: #ee3643;
 }
@@ -129,3 +139,36 @@ a {
 .main-header__buy-button {
   color: #ffffff;
 }
+
+/* стилизация основного содержания */
+
+.material-category {
+  background-color: #ffbf47;
+}
+
+.material-category__link {
+  color: #ffffff;
+  background-color: #e5ac40;
+}
+
+.tools-category {
+  background-color: #3bbce3;
+}
+
+.tools-category__link {
+  color: #ffffff;
+  background-color: #35a9cc;
+}
+
+.machinery-category {
+  background-color: #dc91d8;
+}
+
+.machinery-category__link {
+  color: #ffffff;
+  background-color: #c682c2;
+}
+
+/* Стилизация слайдера */
+
+
