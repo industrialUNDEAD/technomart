@@ -61,11 +61,18 @@ a {
   text-decoration: none;
 }
 
+.button {
+  color: #ffffff; /*необходимая персональная стилизация ссылки */
+  background-color: #ee3643;
+}
+
 /* стилизация шапки */
 
 .main-header {
   background-color: #f3f7f9;
 }
+
+/* Средняя колонка шапки */
 
 .main-header__page-title {
   font-size: 16px;
@@ -95,6 +102,10 @@ a {
   color: #000000;
 }
 
+/* Средняя колонка шапки */
+
+
+/* Верхняя колонка шапки */
 .main-header__top-column {
   font-size: 17px;
   line-height: 18px;
@@ -116,8 +127,13 @@ a {
 .main-header__logo-link {
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
+/* Верхняя колонка шапки */
+
+
+/* Нижняя колонка шапки */
 .main-navigation {
   background-color: #32425c;
 }
@@ -140,7 +156,11 @@ a {
   color: #ffffff;
 }
 
+/* Нижняя колонка шапки */
+
 /* стилизация основного содержания */
+
+/* стилизация презентационного блока */
 
 .material-category__title,
 .tools-category__title,
@@ -194,10 +214,6 @@ a {
   color: gray; /*временно */
 }
 
-.product-slider__slide-link {
-  color: #ffffff; /*необходимая персональная стилизация ссылки */
-  background-color: #ee3643;
-}
 
 /* Стилизация слайдера */
 
@@ -217,4 +233,244 @@ a {
 .delivery-category__link {
   color: #ffffff;
   background-color: #e5ac40;
+}
+
+/* стилизация презентационного блока */
+
+/* стилизация блока популярных товаров */
+
+.top-products__head-block {
+  background-color: #f9f5f0;
+}
+
+.top-products__title,
+.top-makers__title { /* + стилизация заголовка к блоке популярных производителей*/
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.store-product {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.store-product__title {
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.store-product__old-price {
+  text-decoration: line-through;
+  color: #a9a9a9;
+}
+
+.store-product__current-price {
+  color: #ffffff;
+}
+
+/* стилизация блока популярных товаров */
+
+.services,
+.about-shop { /* тут будут блоки "Сервисы" и "О магазине"*/
+  color: #000000;
+}
+
+/* Стилизация подвала */
+
+
+/* стилизация верхней колонки подвала */
+.main-footer {
+  font-size: 18px;
+  line-height: 24px;
+  color: #f3f7f9;
+  background-color: #32425c;
+}
+
+.main-footer__logo-link {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* стилизация верхней колонки подвала */
+
+.footer-navigation__list,
+.main-footer__product-navigation { /* стилизация средней колонки подвала*/
+  list-style: none;
+}
+
+.footer-navigation__link {
+  color: #f3f7f9;
+}
+
+.main-footer__navigation-link,
+.main-footer__developer-name { /* стилизация средней колонки подвала + стилизация двух строчек нижней*/
+  color: #ffd180;
+}
+
+.main-footer__bottom-column {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #293449;
+}
+
+/* Стилизация всплывающего окна с формой обратной связи */
+
+.modal--feedback__label-field {
+  font-size: 18px;
+}
+
+.modal--feedback__name-field::placeholder,
+.modal--feedback__mail-field::placeholder,
+.modal--feedback__message-area::placeholder {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 13px;
+  color: #a9a9a9;
+}
+
+/* Стилизация страницы каталога */
+
+/* Стилазцая шапки страницы каталога */
+
+.main-header__user-name {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.main-header__user-profile-link {
+  font-size: 16px;
+  text-decoration: underline;
+  color: #32425c;
+}
+
+/* Стилизация основного создержания страницы каталога */
+
+.breadcrumbs {
+  font-family: "PTsans", Arial, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+  list-style: none;
+}
+
+.breadcrumbs__link {
+  color: #000000;
+}
+
+.page-title {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  background-color: #f2f6f8;
+}
+
+/* стилизация блока с формой */
+
+.setup-header {
+  font-family: "PTsans", Arial, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.setup-product__group-title {
+  font-family: "PTsans", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+}
+
+.setup-product__label-field {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.setup-product__button-show {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+/* стилизация блока с формой */
+
+
+/* стилизация блока сортировки товаров */
+.sort-block {
+  font-family: "PTSans", Arial, sans-serif;
+}
+
+.sort-block__sort-panel {
+  font-size: 13px;
+  color: #000000;
+  background-color: #f7f3ec;
+}
+
+.sort-block__sort-type-list {
+  list-style: none;
+}
+
+.sort-block__sort-type-link {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.item-card {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.item-card__product-description {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.item-card__old-price {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.item-card__current-price {
+  background-color: #ee3643;
+}
+
+.sort-block__pagination {
+  font-size: 13px;
+}
+
+.sort-block__pagination-link {
+  color: #000000;
+}
+
+.sort-block__pagination-link--current {
+  color: #ffffff;
+}
+
+/* стилизация блока сортировки товаров */
+
+.page-description {
+  color: #000000;
+  background-color: #f2f6f8;
+}
+
+/* Стилизация модального окна добавления товара в корзину */
+
+.modal--cart-add__select-actions {
+  background-color: #f1f1f1;
+}
+
+.modal--cart-add__continue-select {
+  background-color: #ffffff;
 }
