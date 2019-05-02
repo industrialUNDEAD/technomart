@@ -102,6 +102,14 @@ a {
   color: #000000;
 }
 
+.main-header__user-navigation-link:hover {
+  color: #ee3643;
+}
+
+.main-header__user-navigation-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Средняя колонка шапки */
 
 
@@ -132,6 +140,7 @@ a {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  color: #ffffff; /* Для стилизации ссылки на странице каталога */
 }
 
 .main-header__bookmarks-text:active,
@@ -155,6 +164,15 @@ a {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
+}
+
+.main-navigation__link:hover {
+  background-color: #293449;
+}
+
+.main-navigation__link:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
 }
 
 .main-header__buy-block {
@@ -345,6 +363,16 @@ a {
 
 /* стилизация верхней колонки подвала */
 
+.footer-navigation__link:hover,
+.main-footer__navigation-link:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation__link:active,
+.main-footer__navigation-link:active {
+  opacity: 0.5;
+}
+
 .footer-navigation__list,
 .main-footer__product-navigation { /* стилизация средней колонки подвала*/
   list-style: none;
@@ -357,6 +385,14 @@ a {
 .main-footer__navigation-link,
 .main-footer__developer-name { /* стилизация средней колонки подвала + стилизация двух строчек нижней*/
   color: #ffd180;
+}
+
+.main-footer__developer-name:hover {
+  text-decoration: underline;
+}
+
+.main-footer__developer-name:active {
+  color: #ee3643;
 }
 
 .main-footer__bottom-column {
@@ -393,6 +429,18 @@ a {
   font-size: 16px;
   text-decoration: underline;
   color: #32425c;
+}
+
+.main-header__user-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header__user-profile-link:hover {
+  color: #ba2732;
+}
+
+.main-header__user-profile-link:active {
+  color: rgba(50, 66, 92, 0.3);
 }
 
 /* Стилизация основного создержания страницы каталога */
@@ -466,8 +514,15 @@ a {
 }
 
 .sort-block__sort-type-link {
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-block__sort-type-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sort-block__sort-type-link:active {
+  color: #ee3643;
 }
 
 .item-card {
