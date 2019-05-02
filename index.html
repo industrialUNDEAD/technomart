@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -13,8 +14,12 @@
           <p class="header-feedback__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="main-header__user-navigation">
-          <li class="main-header__user-navigation-item">Войти</li>
-          <li class="main-header__user-navigation-item">Регистрация</li>
+          <li class="main-header__user-navigation-item">
+            <a class="main-header__user-navigation-link" href="#">Войти</a>
+          </li>
+          <li class="main-header__user-navigation-item">
+            <a class="main-header__user-navigation-link" href="#">Регистрация</a>
+          </li>
         </ul>
       </div>
       <div class="main-header__top-column">
@@ -94,7 +99,7 @@
               <button class="product-slider__button-prev" type="button">Предыдущий слайд</button>
               <button class="product-slider__button-next" type="button">Следующий слайд</button>
             </div>
-            <a class="product-slider__slide-link" href="#">Открыть каталог</a>
+            <a class="product-slider__slide-link button" href="#">Открыть каталог</a>
             <div class="product-slider__toggle-block">
               <label class="product-slider__toggle-slide">Открыть слайд с перфораторами</label>
               <label class="product-slider__toggle-slide">Открыть слайд с дрелями</label>
@@ -113,7 +118,7 @@
       <section class="top-products">
         <header class="top-products__head-block">
           <h2 class="top-products__title">Популярные товары:</h2>
-          <a class="top-products__link" href="#">Все популярные товары</a>
+          <a class="top-products__link button" href="#">Все популярные товары</a>
         </header>
         <ul class="top-products__list">
           <li class="top-products__item">
@@ -147,7 +152,7 @@
       <section class="top-makers">
         <header class="top-makers__head-block">
           <h2 class="top-makers__title">Популярные Производители:</h2>
-          <a class="top-makers__link" href="#">Все производители</a>
+          <a class="top-makers__link button" href="#">Все производители</a>
           <ul class="top-makers__list">
             <li class="top-makers__item">
               <a class="top-makers__item-link">
@@ -227,7 +232,7 @@
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
             </p>
-            <a class="services__list-description--credit-link" href="#">Отправить заявку</a>
+            <a class="services__list-description--credit-link button" href="#">Отправить заявку</a>
           </div>
         </div>
       </section>
@@ -253,7 +258,7 @@
                 ЖелДорЭкспедиция
             </li>
           </ul>
-          <a class="company-description__link" href="#">Подробнее о компании</a>
+          <a class="company-description__link button" href="#">Подробнее о компании</a>
         </section>
         <section class="contacts about-shop__contacts">
           <h3 class="contacts__title">Контакты</h3>
@@ -262,7 +267,7 @@
               заехав в наш офис:
           </p>
           <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте">
-          <button class="contacts__modal-open" type="button">Заблудились? Напишиту нам!</button>
+          <button class="contacts__modal-open button" type="button">Заблудились? Напишиту нам!</button>
         </section>
       </article>
     </main>
@@ -330,11 +335,11 @@
         <div class="main-footer__developers">
           <p class="main-footer__developers-feedback">
               Обратная связь:
-              <span class="main-footer__developer-name">mail@htmlacademy.ru</span>
+              <a class="main-footer__developer-name" href="#">mail@htmlacademy.ru</a>
           </p>
           <p class="main-footer__developers-cutaway">
               Разработано —
-              <span class="main-footer__developer-name">htmlacademy.ru</span>
+              <a class="main-footer__developer-name" href="#">htmlacademy.ru</a>
           </p>
         </div>
       </div>
@@ -343,18 +348,18 @@
       <h2 class="visually-hidden">Окно отправки сообщения</h2>
       <form class="modal--feedback__feedback-form">
         <p class="modal--feedback__user-name">
-          <label for="name-field">Ваше имя:</label>
+          <label class="modal--feedback__label-field" for="name-field">Ваше имя:</label>
           <input class="modal--feedback__name-field" type="text" id="name-field" placeholder="Имя Фамилия">
         </p>
         <p class="modal--feedback__user-mail">
-          <label for="mail-field">Ваш e-mail:</label>
+          <label class="modal--feedback__label-field" for="mail-field">Ваш e-mail:</label>
           <input class="modal--feedback__mail-field" type="email" id="mail-field" placeholder="email@example.com">
         </p>
         <p class="modal--feedback__user-message">
-          <label for="message-area">Текст письма:</label>
+          <label class="modal--feedback__label-field" for="message-area">Текст письма:</label>
           <textarea class="modal--feedback__message-area" id="message-area" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="modal--feedback__message-submit" type="submit">Отправить</button>
+        <button class="modal--feedback__message-submit button" type="submit">Отправить</button>
         <button class="modal__button-close" type="button">Закрыть окно</button>
       </form>
     </section>

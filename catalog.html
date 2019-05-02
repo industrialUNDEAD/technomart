@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="catalog-page">
     <header class="main-header">
@@ -16,7 +17,7 @@
           <li class="main-header__user-navigation-item">
             <div class="main-header__user-profile">
               <input class="main-header__user-avatar" type="file">
-              <p class="main-header__user-name">Дима Кувалда</p>
+              <a class="main-header__user-name" href="#">Дима Кувалда</a>
               <button class="main-header__profile-exit" type="button">Выход из профиля</button>
               <ul class="main-header__user-profile-list">
                 <li class="main-header__user-profile-item">
@@ -51,7 +52,7 @@
         <nav class="main-navigation">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">Главная</a>
+              <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="#">Компания</a>
@@ -110,23 +111,23 @@
               <legend class="setup-product__group-title">Производители:</legend>
               <ul class="setup-product__makers-list">
                 <li class="setup-product__makers-item">
-                  <label for="bosch">Bosch</label>
+                  <label class="setup-product__label-field" for="bosch">Bosch</label>
                   <input class="setup-product__makers-field" type="checkbox" id="bosch" checked>
                 </li>
                 <li class="setup-product__makers-item">
-                  <label for="интерскол">Интерскол</label>
+                  <label class="setup-product__label-field" for="интерскол">Интерскол</label>
                   <input class="setup-product__makers-field" type="checkbox" id="интерскол">
                 </li>
                 <li class="setup-product__makers-item">
-                  <label for="makita">Makita</label>
+                  <label class="setup-product__label-field" for="makita">Makita</label>
                   <input class="setup-product__makers-field" type="checkbox" id="makita" checked>
                 </li>
                 <li class="setup-product__makers-item">
-                  <label for="makita">Dewalt</label>
+                  <label class="setup-product__label-field" for="makita">Dewalt</label>
                   <input class="setup-product__makers-field" type="checkbox" id="dewalt">
                 </li>
                 <li class="setup-product__makers-item">
-                  <label for="hitachi">Hitachi</label>
+                  <label class="setup-product__label-field" for="hitachi">Hitachi</label>
                   <input class="setup-product__makers-field" type="checkbox" id="hitachi">
                 </li>
               </ul>
@@ -135,11 +136,11 @@
               <legend class="setup-product__group-title">Питание:</legend>
               <ul class="setup-product__charge-list">
                 <li class="setup-product__charge-item">
-                  <label for="storage-battery">Аккумуляторные</label>
+                  <label class="setup-product__label-field" for="storage-battery">Аккумуляторные</label>
                   <input class="setup-product__charge-field" type="radio" name="charge-type" value="storage-battery" id="storage-battery">
                 </li>
                 <li class="setup-product__charge-item">
-                  <label for="network-charging">Сетевые</label>
+                  <label class="setup-product__label-field" for="network-charging">Сетевые</label>
                   <input class="setup-product__charge-field" type="radio" name="charge-type" value="network-charging" id="network-charging">
                 </li>
               </ul>
@@ -417,7 +418,7 @@
       <button class="modal__button-close" type="button">Закрыть окно</button>
       <h2 class="modal--cart-add__title">Товар добавлен в корзину!</h2>
       <div class="modal--cart-add__select-actions">
-        <a class="modal--cart-add__buy-complete" href="#">Оформить заказ</a>
+        <a class="modal--cart-add__buy-complete button" href="#">Оформить заказ</a>
         <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
       </div>
     </section>
