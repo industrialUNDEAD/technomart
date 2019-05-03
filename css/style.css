@@ -66,13 +66,29 @@ a {
   background-color: #ee3643;
 }
 
+.centering-block {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px 10px 0 10px;
+}
+
 /* стилизация шапки */
 
 .main-header {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
   background-color: #f3f7f9;
+  outline: 2px solid red;
 }
 
 /* Средняя колонка шапки */
+
+.main-header__middle-column {
+  order: 2;
+  min-height: 158px;
+  outline: 2px solid blue;
+}
 
 .main-header__page-title {
   font-size: 16px;
@@ -115,6 +131,8 @@ a {
 
 /* Верхняя колонка шапки */
 .main-header__top-column {
+  order: 1;
+  min-height: 42px;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -152,6 +170,12 @@ a {
 
 
 /* Нижняя колонка шапки */
+.main-header__bottom-column {
+  order: 3;
+  min-height: 60px;
+  outline: chartreuse;
+}
+
 .main-navigation {
   background-color: #32425c;
 }
@@ -201,60 +225,55 @@ a {
 
 /* стилизация презентационного блока */
 
-.material-category__title,
-.tools-category__title,
-.machinery-category__title,
-.discounts-category__title,
-.delivery-category__title {
+.presentation-category__title {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.material-category__link:hover,
-.tools-category__link:hover,
-.machinery-category__link:hover,
-.discounts-category__link:hover,
-.delivery-category__link:hover {
+.presentation-category__link:hover {
   background-color: #cccccc;
 }
 
-.material-category__link:active,
-.tools-category__link:active,
-.machinery-category__link:active,
-.discounts-category__link:active,
-.delivery-category__link:active {
+.presentation-category__link:active {
   background-color: #b2b2b2;
 }
 
-.material-category {
+.service-presentation__presentation-category--material-category {
   background-color: #ffbf47;
 }
 
-.material-category__link {
+.presentation-category__link--material-link {
   color: #ffffff;
   background-color: #e5ac40;
 }
 
-.tools-category {
+.service-presentation__presentation-category--tools-category {
   background-color: #3bbce3;
 }
 
-.tools-category__link {
+.presentation-category__link--tools-link {
   color: #ffffff;
   background-color: #35a9cc;
 }
 
-.machinery-category {
+.service-presentation__presentation-category--machinery-category {
   background-color: #dc91d8;
 }
 
-.machinery-category__link {
+.presentation-category__link--machinery-link {
   color: #ffffff;
   background-color: #c682c2;
 }
 
 /* Стилизация слайдера */
+
+.centering-block--presentation-block {
+}
+
+.product-slider__drills-slide {
+  display: none; /* Временно, для удобного построения сетки */
+}
 
 .product-slider__slide-title {
   font-size: 36px;
@@ -280,20 +299,20 @@ a {
 
 /* Стилизация слайдера */
 
-.discounts-category {
+.service-presentation__presentation-category--discounts-category {
   background-color: #8ed78f;
 }
 
-.discounts-category__link {
+.presentation-category__link--discounts-link {
   color: #ffffff;
   background-color: #80c180;
 }
 
-.delivery-category {
+.service-presentation__presentation-category--delivery-category {
   background-color: #ffc047;
 }
 
-.delivery-category__link {
+.presentation-category__link--delivery-link {
   color: #ffffff;
   background-color: #e5ac40;
 }
