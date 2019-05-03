@@ -445,7 +445,7 @@ a {
 
 /* Стилизация основного создержания страницы каталога */
 
-.breadcrumbs {
+.page-header__breadcrumbs {
   font-family: "PTsans", Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
@@ -453,11 +453,11 @@ a {
   list-style: none;
 }
 
-.breadcrumbs__link {
+.page-header__link {
   color: #000000;
 }
 
-.page-title {
+.page-header__title {
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
