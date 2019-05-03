@@ -72,6 +72,20 @@ a {
   padding: 0px 10px 0 10px;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /* стилизация шапки */
 
 .main-header {
@@ -225,6 +239,15 @@ a {
 
 /* стилизация презентационного блока */
 
+.centering-block--presentation-block { /* тут будет микросетка презентационного блока */
+  /* display: flex; */
+}
+
+.presentation-category {
+  width: 300px;
+  min-height: 123px;
+}
+
 .presentation-category__title {
   font-size: 24px;
   line-height: 30px;
@@ -268,7 +291,10 @@ a {
 
 /* Стилизация слайдера */
 
-.centering-block--presentation-block {
+.product-slider {
+  width: 621px;
+  min-height: 266px;
+  outline: 2px solid red;
 }
 
 .product-slider__drills-slide {
@@ -322,6 +348,9 @@ a {
 /* стилизация блока популярных товаров */
 
 .top-products__head-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px 0 30px;
   background-color: #f9f5f0;
 }
 
@@ -357,10 +386,74 @@ a {
 
 /* стилизация блока популярных товаров */
 
-.services,
-.about-shop { /* тут будут блоки "Сервисы" и "О магазине"*/
+
+/* стилизация блока популярных производителей */
+
+.top-makers__head-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px 0 26px;
+  background-color: #f9f5f0;
+}
+
+/* стилизация блока популярных производителей */
+
+
+/* стилизация блока сервисов */
+
+.services {
+  color: #000000;
+  background-color: #f4f8f9;
+}
+
+.services__head-description {
+  width: 400px;
+}
+
+.services__description-item--guarantee {
+  display: none; /* временно, для построения сетки */
+}
+
+.services__description-item--credit {
+  display: none; /* временно, для построения сетки */
+}
+
+.services__main-content {
+  display: flex;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  width: 240px;
+  list-style: none;
+}
+
+.services__description-item {
+  width: 301px;
+}
+
+/* стилизация блока сервисов */
+
+
+/* стилизация блока описания магазина */
+.about-shop {
+  display: flex;
+  justify-content: space-between;
   color: #000000;
 }
+
+.company-description {
+  width: 540px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+/* стилизация блока описания магазина */
+
+
 
 /* Стилизация подвала */
 
@@ -373,14 +466,42 @@ a {
   background-color: #32425c;
 }
 
+.centering-block--footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer__logo-block {
+  width: 220px;
+}
+
 .main-footer__logo-link {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #ffffff;
+  background-color: #ee3643;
+}
+
+.footer-navigation {
+  width: 550px;
+}
+
+.footer-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* стилизация верхней колонки подвала */
+
+.centering-block--footer-middle {
+  display: flex;
+}
+
+.main-footer__office-location {
+  width: 340px;
+}
 
 .footer-navigation__link:hover,
 .main-footer__navigation-link:hover {
@@ -392,8 +513,8 @@ a {
   opacity: 0.5;
 }
 
-.footer-navigation__list,
 .main-footer__product-navigation { /* стилизация средней колонки подвала*/
+  width: 540px;
   list-style: none;
 }
 
@@ -414,10 +535,33 @@ a {
   color: #ee3643;
 }
 
+/* стилизация нижней части подвала */
+
+.centering-block--footer-bottom {
+  display: flex;
+}
+
 .main-footer__bottom-column {
   font-size: 16px;
   line-height: 18px;
   background-color: #293449;
+}
+
+.main-footer__social-list {
+  margin: 0;
+  padding: 0;
+  width: 131px;
+  list-style: none;
+}
+
+.main-footer__copyright {
+  margin-right: 150px;
+  width: 240px;
+}
+
+.main-footer__developers {
+  margin-left: auto;
+  width: 300px;
 }
 
 /* Стилизация всплывающего окна с формой обратной связи */
