@@ -627,7 +627,16 @@ input[type="radio"].visually-hidden {
   background-color: #f2f6f8;
 }
 
+.catalog-settings {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* стилизация блока с формой */
+
+.setup {
+  width: 220px;
+}
 
 .setup-header {
   font-family: "PTsans", Arial, sans-serif;
@@ -662,7 +671,9 @@ input[type="radio"].visually-hidden {
 
 
 /* стилизация блока сортировки товаров */
+
 .sort-block {
+  width: 700px;
   font-family: "PTSans", Arial, sans-serif;
 }
 
@@ -723,10 +734,17 @@ input[type="radio"].visually-hidden {
 
 /* стилизация блока сортировки товаров */
 
+
+/* стилизация блока резюмирования страницы */
+
 .page-description {
   color: #000000;
   background-color: #f2f6f8;
 }
+
+/* стилизация блока резюмирования страницы */
+
+
 
 /* Стилизация модального окна добавления товара в корзину */
 
