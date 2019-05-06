@@ -61,6 +61,11 @@ a {
   text-decoration: none;
 }
 
+img { /* универсальное правило для того, что бы контентные изображения не вылезали за блоки в которых они находятся */
+  max-width: 100%;
+  height: auto;
+}
+
 .button {
   color: #ffffff; /*необходимая персональная стилизация ссылки */
   background-color: #ee3643;
@@ -145,6 +150,7 @@ input[type="radio"].visually-hidden {
 
 /* Верхняя колонка шапки */
 .main-header__top-column {
+  display: flex;
   order: 1;
   min-height: 42px;
   font-size: 17px;
@@ -152,6 +158,11 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   background-color: #293449;
 }
+
+.centering-block--header-top {
+  display: flex;
+}
+
 
 .main-header__search-field::placeholder { /* Персональная стилизация подписи в поле-поиска*/
   font-size: 17px;
@@ -161,6 +172,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__logo-block {
+  width: 220px;
   background-color: #ee3643;
 }
 
@@ -169,8 +181,14 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 42px;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff; /* Для стилизации ссылки на странице каталога */
 }
