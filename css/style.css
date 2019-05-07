@@ -50,6 +50,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 960px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -163,17 +164,76 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
+.main-header__search-block {
+  position: relative;;
+}
+
+.main-header__search-logo {
+  position: absolute;
+  left: 17px;
+  top: 12px;
+}
+
+.main-header__search-field { /* сброс стилей по умолчанию у поля поиска */
+  -webkit-appearance: none;
+  width: 270px;
+  padding: 0;
+  padding-top: 14px;
+  padding-left: 49px;
+  padding-bottom: 13px;
+  border: 0;
+  background-color: #293449;
+}
+
+.main-header__search-logo-figure {
+  fill: #ffffff;
+}
+
+.main-header__search-logo {
+  opacity: 0.3;
+}
+
+.main-header__search-field::-webkit-search-cancel-button { /* сброс крестика для сброса введенных в поле данных */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main-header__search-field:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-header__search-field:hover + .main-header__search-logo {
+  opacity: 1;
+}
+
+.main-header__search-field:focus + .main-header__search-logo {
+  opacity: 1;
+}
+
+.main-header__search-field:focus + .main-header__search-logo .main-header__search-logo-figure { /* подсвечивание иконки поиска при фокусе на поле поиска */
+  fill: #ee3643;
+}
 
 .main-header__search-field::placeholder { /* Персональная стилизация подписи в поле-поиска*/
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #293449;
 }
 
 .main-header__logo-block {
+  position: relative;;
   width: 220px;
   background-color: #ee3643;
+}
+
+.main-header__logo-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 220px;
+  height: 5px;
+  background-color: #b52933;
 }
 
 .main-header__logo-block:hover {
