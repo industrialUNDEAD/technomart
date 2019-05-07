@@ -99,7 +99,6 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   min-height: 320px;
   background-color: #f3f7f9;
-  outline: 2px solid red;
 }
 
 /* Средняя колонка шапки */
@@ -107,7 +106,6 @@ input[type="radio"].visually-hidden {
 .main-header__middle-column {
   order: 2;
   min-height: 158px;
-  outline: 2px solid blue;
 }
 
 .main-header__page-title {
@@ -253,6 +251,48 @@ input[type="radio"].visually-hidden {
   color: #ffffff; /* Для стилизации ссылки на странице каталога */
 }
 
+.main-header__cart-block,
+.main-header__bookmarks-block {
+  position: relative;
+}
+
+.main-header__bookmarks-block {
+  width: 122px;
+  margin-right: 28px;
+}
+
+.main-header__cart-block {
+  width: 122px;
+  margin-right: 31px;
+}
+
+.main-header__cart-block::before,
+.main-header__bookmarks-block::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: block;
+  background-color: red;
+}
+
+.main-header__cart-block::before {
+  width: 15px;
+  height: 15px;
+}
+
+.main-header__bookmarks-block::before {
+  width: 14px;
+  height: 16px;
+}
+
+.main-header__bookmarks-text,
+.main-header__cart-text {
+  margin-top: 14px;
+  margin-bottom: 0;
+  padding-left: 50px;
+}
+
 .main-header__bookmarks-text:active,
 .main-header__cart-text:active {
   opacity: 0.6;
@@ -265,7 +305,6 @@ input[type="radio"].visually-hidden {
 .main-header__bottom-column {
   order: 3;
   min-height: 60px;
-  outline: chartreuse;
 }
 
 .main-navigation {
@@ -292,6 +331,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__buy-block {
+  /* width: 150px; */
   background-color: #63a63e;
 }
 
@@ -308,6 +348,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__buy-button {
+  display: block;
+  width: 109px;
+  padding: 14px 20px 14px 20px;
   color: #ffffff;
 }
 
