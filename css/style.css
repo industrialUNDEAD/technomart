@@ -105,43 +105,107 @@ input[type="radio"].visually-hidden {
 
 .main-header__middle-column {
   order: 2;
-  min-height: 158px;
+  min-height: 158px; /* временно */
+}
+
+.centering-block--header-middle {
+  display: flex;
 }
 
 .main-header__page-title {
+  margin: 0 59px 40px 53px;
+  width: 210px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
   color: #ee3643;
 }
 
+.header-feedback {
+  margin-right: 69px;
+  width: 269px;
+}
+
+.header-feedback__phone-block {
+  position: relative;;
+  width: 264px;
+  border: 3px solid #ffffff;
+}
+
 .header-feedback__phone-number {
+  display: block;
+  margin: 11px 0 8px 71px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
 }
 
+.header-feedback__phone-number::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/icon-phone.svg");
+}
+
 .header-feedback__adress {
+  margin: 0 0 0 10px;
   line-height: 24px;
   color: #32425c;
 }
 
+.main-header__user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 281px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-header__user-navigation-item {
+  position: relative;;
   background-color: #ffffff;
 }
 
 .main-header__user-navigation-link {
+  display: block;
+  margin: 14px 27px 16px 25px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+}
+
+.main-header__user-navigation-link--enter {
+  margin-left: 48px;
+}
+
+.main-header__user-navigation-link--enter::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  width: 20px;
+  height: 17px;
+  background-image: url("../img/icon-login.svg");
+  opacity: 0.3;
 }
 
 .main-header__user-navigation-link:hover {
   color: #ee3643;
 }
 
+.main-header__user-navigation-link:hover::before {
+  opacity: 1;
+}
+
 .main-header__user-navigation-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header__user-navigation-link:active::before {
+  opacity: 0.5;
 }
 
 /* Средняя колонка шапки */
@@ -151,7 +215,7 @@ input[type="radio"].visually-hidden {
 .main-header__top-column {
   display: flex;
   order: 1;
-  min-height: 42px;
+  margin-bottom: 47px;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
