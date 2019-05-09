@@ -105,7 +105,6 @@ input[type="radio"].visually-hidden {
 
 .main-header__middle-column {
   order: 2;
-  min-height: 158px; /* временно */
 }
 
 .centering-block--header-middle {
@@ -391,10 +390,16 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 20px;
+  padding: 0;
   list-style: none;
 }
 
 .main-navigation__link {
+  display: block;
+  padding: 22px 31px 26px 31px;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
