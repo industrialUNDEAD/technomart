@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header main-header--page-context">
       <div class="main-header__middle-column">
         <div class="centering-block centering-block--header-middle">
           <h1 class="main-header__page-title">Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
@@ -81,7 +81,7 @@
       <section class="service-presentation">
         <h2 class="visually-hidden">Презентация услуг интернет-магазина</h2>
         <div class="centering-block centering-block--presentation-block">
-          <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--material-category">
+          <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--material-category service-presentation__new-products">
             <h3 class="presentation-category__title presentation-category__title--material-title">Материалы</h3>
             <a class="presentation-category__link presentation-category__link--material-link" href="#">На любой вкус</a>
           </section>
@@ -96,6 +96,8 @@
           <section class="product-slider service-presentation__product-slider">
             <h3 class="visually-hidden">Лучшие категории товаров</h3>
             <article class="product-slider__slide-item">
+              <input class="visually-hidden" type="radio" id="perforator-slide" name="toggle"><!--для доступного переключения слайдов без js-->
+              <input class="visually-hidden" type="radio" id="drill-slide" name="toggle" checked><!--для доступного переключения слайдов без js-->
               <div class="product-slider__perforators-slide">
                 <h4 class="product-slider__slide-title">Перфораторы</h4>
                 <p class="product-slider__slide-slogan">Настоящие мужские игрушки</p>
@@ -116,19 +118,25 @@
               </div>
               <a class="product-slider__slide-link button" href="#">Открыть каталог</a>
               <div class="product-slider__toggle-block">
-                <label class="product-slider__toggle-slide">Открыть слайд с перфораторами</label>
-                <label class="product-slider__toggle-slide">Открыть слайд с дрелями</label>
+                <label class="product-slider__toggle-slide product-slider__toggle-slide--perforator-toggle" for="perforator-slide">
+                  <span class="visually-hidden">Открыть слайд с перфораторами</span>
+                </label>
+                <label class="product-slider__toggle-slide product-slider__toggle-slide--drill-toggle" for="drill-slide">
+                  <span class="visually-hidden">Открыть слайд с дрелями</span>
+                </label>
               </div>
             </article>
           </section>
-          <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--discounts-category">
-            <h3 class="presentation-category__title presentation-category__title--discounts-title">Скидки 50%</h3>
-            <a class="presentation-category__link presentation-category__link--discounts-link" href="#">На 350 товаров</a>
-          </section>
-          <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--delivery-category">
-            <h3 class="presentation-category__title presentation-category__title--delivery-title">Доставка</h3>
-            <a class="presentation-category__link presentation-category__link--delivery-link" href="#">Бесплатно</a>
-          </section>
+          <div class="service-presentation__floating-block">
+            <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--discounts-category">
+              <h3 class="presentation-category__title presentation-category__title--discounts-title">Скидки 50%</h3>
+              <a class="presentation-category__link presentation-category__link--discounts-link" href="#">На 350 товаров</a>
+            </section>
+            <section class="presentation-category service-presentation__presentation-category service-presentation__presentation-category--delivery-category">
+              <h3 class="presentation-category__title presentation-category__title--delivery-title">Доставка</h3>
+              <a class="presentation-category__link presentation-category__link--delivery-link" href="#">Бесплатно</a>
+            </section>
+          </div>
         </div>
       </section>
       <section class="top-products centering-block">
