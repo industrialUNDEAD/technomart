@@ -93,6 +93,16 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.new-product::after { /* класс обозначающий наличие новых товаров в категории */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/new-flag.png");
+}
+
 
 /* стилизация шапки */
 
@@ -467,13 +477,13 @@ input[type="radio"].visually-hidden {
 }
 
 .service-presentation__new-products::after { /* класс обозначающий наличие новых товаров в категории */
-  content: "";
+  /* content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 60px;
   height: 59px;
-  background-image: url("../img/new-flag.png");
+  background-image: url("../img/new-flag.png"); */
 }
 
 .presentation-category:nth-child(1),
@@ -774,6 +784,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
   padding: 0 24px 0 28px;
   background-color: #f9f5f0;
 }
@@ -796,26 +807,84 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
+.top-products__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top-products__item {
+  margin-right: 20px;
+  width: 220px;
+}
+
 .store-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  border: 1px solid #eaeaea;
   font-family: "PTSans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
 }
 
+.top-products__store-product--bosch-bfg-2000 {
+  position: relative; /* для позиционирования флага новинки товара */
+}
+
+.store-product__image {
+  order: 1;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
 .store-product__title {
+  order: 2;
+  margin: 0;
+  margin-bottom: 14px;
+  width: 160px;
   font-size: 18px;
   line-height: 20px;
+  text-align: center;
   color: #000000;
 }
 
 .store-product__old-price {
+  order: 3;
+  margin: 0;
+  margin-bottom: 8px;
   text-decoration: line-through;
   color: #a9a9a9;
 }
 
+.store-product__old-price--none {
+  margin-bottom: 26px;
+}
+
 .store-product__current-price {
+  position: relative; /* для создания декоративного эффекта */
+  order: 4;
+  margin: 0;
+  margin-bottom: 18px;
+  padding-left: 36px;
+  padding-right: 39px;
+  padding-bottom: 9px;
+  background-color: #ee3643;
   color: #ffffff;
+}
+
+.store-product__current-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
 }
 
 /* стилизация блока популярных товаров */
