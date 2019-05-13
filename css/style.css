@@ -69,6 +69,8 @@ img { /* универсальное правило для того, что бы 
 
 .button {
   padding: 13px 0 8px 0;
+  text-transform: uppercase;
+  text-align: center;
   color: #ffffff; /*необходимая персональная стилизация ссылки */
   background-color: #ee3643;
   border-radius: 2px;
@@ -670,7 +672,6 @@ input[type="radio"].visually-hidden {
   margin-left: 4px;
   padding-left: 49px;
   padding-right: 45px;
-  text-transform: uppercase;
 }
 
 .product-slider__slide-link:hover {
@@ -780,6 +781,10 @@ input[type="radio"].visually-hidden {
 
 /* стилизация блока популярных товаров */
 
+.top-products--page-context {
+  margin-bottom: 20px;
+}
+
 .top-products__head-block {
   display: flex;
   justify-content: space-between;
@@ -791,20 +796,16 @@ input[type="radio"].visually-hidden {
 
 .top-products__title,
 .top-makers__title { /* + стилизация заголовка к блоке популярных производителей*/
+  margin: 30px 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
 }
 
-.top-products__title {
-  margin: 30px 0;
-}
-
 .top-products__link {
   padding-left: 55px;
   padding-right: 55px;
-  text-transform: uppercase;
 }
 
 .top-products__list {
@@ -895,8 +896,41 @@ input[type="radio"].visually-hidden {
 .top-makers__head-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   padding: 0 24px 0 26px;
   background-color: #f9f5f0;
+}
+
+.top-makers__link {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.top-makers__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top-makers__item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.top-makers__item:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.top-makers__item-link {
+  display: flex;
+  justify-content: center; /* для выравнивания изображения по центру внутри блока */
+  align-items: center; /* для выравнивания изображения по центру внутри блока */
+  width: 218px;
+  height: 143px;
+  border: 1px solid #ebebeb;
 }
 
 /* стилизация блока популярных производителей */
