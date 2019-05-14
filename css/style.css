@@ -1102,6 +1102,85 @@ input[type="radio"].visually-hidden {
   width: 300px;
 }
 
+.company-description__title,
+.contacts__title {
+  margin: 0;
+  margin-top: 78px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-description__shop-work,
+.contacts__invitation-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.company-description__shop-work {
+  margin-bottom: 25px;
+  width: 530px;
+}
+
+.company-description__shop-work--bottom-paragraph {
+  margin-bottom: 20px;
+  width: 390px;
+}
+
+.company-description__partners-list {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+  list-style: none;
+}
+
+.company-description__partners-item {
+  position: relative; /* для создания дизайнерских маркеров списка */
+  margin-left: 36px;
+  margin-bottom: 22px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.company-description__partners-item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -37px;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.company-description__link {
+  display: block;
+  width: 193px;
+  margin-bottom: 86px;
+  padding-left: 15px;
+  padding-right: 12px;
+}
+
+.contacts__invitation-text {
+  margin-bottom: 32px;
+  width: 180px;
+}
+
+.contacts__map-location { /* дублирование размера контентного изображения */
+  margin-bottom: 35px;
+  width: 300px;
+  height: 158px;
+}
+
+.contacts__modal-open {
+  padding-left: 64px;
+  padding-right: 67px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 /* стилизация блока описания магазина */
 
 
