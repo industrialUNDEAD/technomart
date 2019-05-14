@@ -893,6 +893,10 @@ input[type="radio"].visually-hidden {
 
 /* стилизация блока популярных производителей */
 
+.top-makers--page-context {
+  margin-bottom: 65px; /* отступ до нижнего блока с учетом отступов карточек производителей */
+}
+
 .top-makers__head-block {
   display: flex;
   justify-content: space-between;
@@ -920,7 +924,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
-.top-makers__item:nth-child(4n+4) {
+.top-makers__item:nth-child(4n+4) { /* исходя из ширины карточек и самого блока, обнулятся отступы должны у каждой 4-й карточки */
   margin-right: 0;
 }
 
@@ -939,20 +943,85 @@ input[type="radio"].visually-hidden {
 /* стилизация блока сервисов */
 
 .services {
+  padding-bottom: 102px;
   color: #000000;
   background-color: #f4f8f9;
 }
 
+.services__head-block {
+  margin-bottom: 70px;
+  padding-top: 1px; /* для ликвидации эффекта выпадания внешнего отступа */
+}
+
+.services__head-title {
+  margin: 0;
+  margin-top: 65px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
 .services__head-description {
-  width: 400px;
+  margin: 0;
+  width: 370px;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services__description-item {
+  position: relative; /* для создания и поцизионирования логотипа элемента списка */
+  width: 390px;
+}
+
+.services__description-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -227px;
+}
+
+.services__description-item--delivery {
+  display: block;
+}
+
+.services__description-item--delivery::after {
+  top: 22px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/delivery-logo.png");
 }
 
 .services__description-item--guarantee {
   display: none; /* временно, для построения сетки */
 }
 
+.services__description-item--guarantee::after {
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/guarantee-logo.png");
+}
+
 .services__description-item--credit {
   display: none; /* временно, для построения сетки */
+}
+
+.services__description-item--credit::after {
+  z-index: 1; /* для расположения левого края большего логотипа под ссылкой  */
+  width: 465px;
+  height: 285px;
+  background-image: url("../img/credit-logo.png");
+}
+
+.services__list-description--credit-link {
+  z-index: 2; /* для расположения ссылки поверх большого логотипа элемента списка */
+  position: relative; /* для расположения ссылки поверх большого логотипа элемента списка */
+  display: block;
+  box-sizing: border-box;
+  margin-top: 30px;
+  padding-left: 44px;
+  width: 195px;
+  padding-right: 44px;
 }
 
 .services__main-content {
@@ -960,14 +1029,59 @@ input[type="radio"].visually-hidden {
 }
 
 .services__list {
+  position: relative; /* для создание декоративной тени вокруг всего списка */
   margin: 0;
+  margin-right: 82px;
   padding: 0;
   width: 240px;
   list-style: none;
 }
 
-.services__description-item {
-  width: 301px;
+.services__list::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow.png");
+}
+
+.services__item {
+  padding-top: 14px;
+  padding-left: 23px;
+  padding-bottom: 16px;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  border-bottom: 1px solid #4e637c;
+  color: #ffffff;
+  background-color: #32425c;
+  cursor: pointer;
+}
+
+.services__item--current {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.services__item:last-child { /* что бы всегда у последнего элемента списка нижняя рамка не вылезала на фон */
+  border: none;
+}
+
+.services__item-title {
+  margin: 0;
+  margin-bottom: 22px;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services__item-description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /* стилизация блока сервисов */
