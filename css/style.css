@@ -1199,37 +1199,73 @@ input[type="radio"].visually-hidden {
 .centering-block--footer-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
-.main-footer__logo-block {
+.main-footer__logo-block { /* неплохоий юзкейс с заданием ссылке блочной отображение, а огрничивать её место на странице по ширине размерами блока обертки */
   width: 220px;
 }
 
-.main-footer__logo-link {
+.main-footer__logo-link { /* неплохоий юзкейс с заданием ссылке блочной отображение, а огрничивать её место на странице по ширине размерами блока обертки */
+  position: relative; /* для создание декоративной тени у ссылки */
+  display: block;
+  padding-top: 18px;
+  padding-bottom: 21px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
   background-color: #ee3643;
 }
 
+.main-footer__logo-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  height: 5px;
+  background-color: #b52933;
+}
+
 .footer-navigation {
-  width: 550px;
+  width: 578px;
 }
 
 .footer-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-left: 30px;
   list-style: none;
+}
+
+.footer-navigation__item {
+  margin-right: 59px;
+  padding-top: 37px;
+}
+
+.footer-navigation__item:last-child {
+  margin-right: 0;
+}
+
+.footer-navigation__item:last-child {
+  padding-right: 0;
 }
 
 /* стилизация верхней колонки подвала */
 
 .centering-block--footer-middle {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .main-footer__office-location {
+  margin: 0;
+  padding-left: 3px;
   width: 340px;
 }
 
@@ -1244,8 +1280,21 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer__product-navigation { /* стилизация средней колонки подвала*/
-  width: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  width: 524px;
   list-style: none;
+}
+
+.main-footer__navigation-item {
+  margin-right: 59px;
+}
+
+.main-footer__navigation-item:last-child {
+  margin-right: 0;
 }
 
 .footer-navigation__link {
@@ -1269,6 +1318,8 @@ input[type="radio"].visually-hidden {
 
 .centering-block--footer-bottom {
   display: flex;
+  padding-top: 37px;
+  padding-bottom: 20px;
 }
 
 .main-footer__bottom-column {
@@ -1278,20 +1329,60 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer__social-list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   width: 131px;
   list-style: none;
 }
 
+.main-footer__social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50%;
+}
+
+.main-footer__social-link--vk {
+  background-image: url("../img/vk-icon.svg");
+}
+
+.main-footer__social-link--facebook {
+  background-image: url("../img/fb-icon.svg");
+}
+
+.main-footer__social-link--instagram {
+  background-image: url("../img/insta-icon.svg");
+}
+
 .main-footer__copyright {
+  margin-top: 0;
   margin-right: 150px;
   width: 240px;
 }
 
 .main-footer__developers {
+  display: flex;
+  justify-content: space-between;
   margin-left: auto;
   width: 300px;
+}
+
+.main-footer__developers-feedback,
+.main-footer__developers-cutaway {
+  margin: 0;
+}
+
+.main-footer__developers-feedback {
+  width: 140px;
+}
+
+.main-footer__developers-cutaway {
+  width: 112px;
 }
 
 /* Стилизация всплывающего окна с формой обратной связи */
