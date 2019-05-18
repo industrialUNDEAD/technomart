@@ -76,6 +76,14 @@ img { /* универсальное правило для того, что бы 
   border-radius: 2px;
 }
 
+.button:hover {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
 .centering-block {
   width: 940px;
   margin: 0 auto;
@@ -674,13 +682,12 @@ input[type="radio"].visually-hidden {
   padding-right: 45px;
 }
 
-.product-slider__slide-link:hover {
+/* .product-slider__slide-link:hover { СДЕЛАЛ СТИЛИЗАЦИЮ ЧЕРЕЗ ОБЩИЙ КЛАСС ДЛЯ ССЫЛОК, НУЖНО ЕЩЕ ПОДУМАТЬ НУЖНО ЛИ ТАК ДЕЛАТЬ
   background-color: #ca2c37;
 }
-
 .product-slider__slide-link:active {
   background-color: #ba2732;
-}
+} */
 
 .product-slider__buttons-block {
   z-index: 2; /* для создание расслоения слайда */
@@ -832,6 +839,27 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
 }
 
+
+.store-product:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.store-product:hover .store-product__title {
+  margin-bottom: 40px;
+}
+
+.store-product:hover .store-product__image  {
+  display: none;
+}
+
+.store-product:hover .store-product__product-actions {
+  display: block;
+}
+
+.store-product:hover .store-product__old-price {
+  display: none;
+}
+
 .top-products__store-product--bosch-bfg-2000 {
   position: relative; /* для позиционирования флага новинки товара */
 }
@@ -840,6 +868,75 @@ input[type="radio"].visually-hidden {
   order: 1;
   margin-top: 25px;
   margin-bottom: 40px;
+}
+
+.store-product__product-actions {
+  display: none;
+  margin-top: 45px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.store-product__product-action {
+  padding: 9px 29px 9px 33px;
+  border: none;
+  width: 158px; /* поскольку шрифты отрисовываются по разному, что бы добиться соответствия по макету пришлось сделать ширину кнопок больше макетной  */
+  box-sizing: border-box;
+  font-size: 14px; /* персональная настройка шрифта для кнопок */
+  line-height: 18px; /* персональная настройка шрифта для кнопок */
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+}
+
+.store-product__product-action--add-product {
+  position: relative; /* для создание иконки в кнопке */
+  margin-bottom: 7px;
+  border-bottom: 3px solid #367315;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #63a63e;
+}
+
+.store-product__product-action--add-product::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  opacity: 0.3;
+}
+
+.store-product__product-action--add-product:hover {
+  background-color: #5fbb2d;
+}
+
+.store-product__product-action--add-product:hover::after {
+  opacity: 1;
+}
+
+.store-product__product-action--add-product:active {
+  background-color: #518534;
+}
+
+.store-product__product-action--add-product:active::after {
+  opacity: 1;
+}
+
+.store-product__product-action--add-bookmark {
+  border: 3px solid #63a63e;
+  border-radius: 3px;
+  color: #32425c;
+}
+
+.store-product__product-action--add-bookmark:hover,
+.store-product__product-action--add-bookmark:focus {
+  border-color: #32425c;
+}
+
+.store-product__product-action--add-bookmark:active {
+  opacity: 0.3;
 }
 
 .store-product__title {
@@ -875,6 +972,10 @@ input[type="radio"].visually-hidden {
   padding-bottom: 9px;
   background-color: #ee3643;
   color: #ffffff;
+}
+
+.store-product__current-price:hover::after  {
+  border-left-color: #ca2c37;
 }
 
 .store-product__current-price::after {
@@ -935,6 +1036,16 @@ input[type="radio"].visually-hidden {
   width: 218px;
   height: 143px;
   border: 1px solid #ebebeb;
+}
+
+
+.top-makers__item-link:hover {
+  box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
+}
+
+
+.top-makers__item-link:active {
+  box-shadow: 0px 4px 10px 0px rgba(41, 52, 73, 0.5);
 }
 
 /* стилизация блока популярных производителей */
@@ -1345,6 +1456,14 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 50%;
+}
+
+.main-footer__social-link:hover {
+  background-color: #ee3643;
+}
+
+.main-footer__social-link:active {
+  background-color: #ee3643;
 }
 
 .main-footer__social-link--vk {
