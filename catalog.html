@@ -6,82 +6,101 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="catalog-page">
-    <header class="main-header">
-      <div class="main-header__middle-column">
-        <div class="centering-block">
-          <h1 class="main-header__page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-          <div class="main-header__header-feedback header-feedback">
-            <span class="header-feedback__phone-number">+7 (812) 555-05-55</span>
-            <p class="header-feedback__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </div>
-          <ul class="main-header__user-navigation">
-            <li class="main-header__user-navigation-item">
-              <div class="main-header__user-profile">
-                <input class="main-header__user-avatar" type="file">
-                <a class="main-header__user-name" href="#">Дима Кувалда</a>
-                <a class="main-header__profile-exit" href="#">Выход из профиля</a>
-                <ul class="main-header__user-profile-list">
-                    <li class="main-header__user-profile-item">
-                      <a class="main-header__user-profile-link" href="#">Мои заказы</a>
-                    </li>
-                    <li class="main-header__user-profile-item">
-                      <a class="main-header__user-profile-link" href="#">Личный кабинет</a>
-                    </li>
-                  </ul>
+      <header class="main-header main-header--page-context">
+        <div class="main-header__middle-column">
+          <div class="centering-block centering-block--header-middle">
+            <h1 class="main-header__page-title">Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
+            <div class="main-header__header-feedback header-feedback">
+              <div class="header-feedback__phone-block">
+                <span class="header-feedback__phone-number">+7 (812) 555-05-55</span>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="main-header__top-column">
-        <div class="centering-block">
-          <div class="main-header__logo-block">
-            <a class="main-header__logo-link" href="index.html">Техномарт</a>
-          </div>
-          <div class="main-header__search-block">
-            <input class="main-header__search-field" type="search" placeholder="Поиск">
-          </div>
-          <div class="main-header__bookmarks-block">
-            <p class="main-header__bookmarks-text">Закладки <span class="main-header__bookmarks-counter">0</span></p>
-          </div>
-          <div class="main-header__cart-block">
-            <p class="main-header__cart-text">Корзина <span class="main-header__cart-counter">0</span></p>
-          </div>
-          <div class="main-header__buy-block">
-            <a class="main-header__buy-button" href="#">Оформить заказ</a>
-          </div>
-        </div>
-      </div>
-      <div class="main-header__bottom-column">
-        <div class="centering-block">
-          <nav class="main-navigation">
-            <ul class="main-navigation__list">
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="index.html">Главная</a>
+              <p class="header-feedback__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </div>
+            <ul class="main-header__user-navigation">
+              <li class="main-header__unregistered-user">
+                <ul class="main-header__unregistered-user-list">
+                  <li class="main-header__user-navigation-item">
+                    <a class="main-header__user-navigation-link main-header__user-navigation-link--enter" href="#">Войти</a>
+                  </li>
+                  <li class="main-header__user-navigation-item">
+                    <a class="main-header__user-navigation-link main-header__user-navigation-link--user-registration" href="#">Регистрация</a>
+                  </li>
+                </ul>
               </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Компания</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="catalog.html">Каталог</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Новости</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Спецпредложение</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Доставка</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Контакты</a>
+              <li class="main-header__logged-user">
+                <ul class="main-header__logged-user-list">
+                  <li class="main-header__user-navigation-item">
+                    <a class="main-header__user-login" href="#">Дима Кувалда</a>
+                  </li>
+                  <li class="main-header__user-navigation-item">
+                    <a class="main-header__profile-exit" href="#">
+                      <span class="visually-hidden">Выход из профиля</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="main-header__user-profile-list">
+                  <li class="main-header__user-profile-item">
+                    <a class="main-header__user-profile-link" href="#">Мои заказы</a>
+                  </li>
+                  <li class="main-header__user-profile-item">
+                    <a class="main-header__user-profile-link" href="#">Личный кабинет</a>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
-      </div>
-    </header>
+        <div class="main-header__top-column">
+          <div class="centering-block centering-block--header-top">
+            <div class="main-header__logo-block">
+              <a class="main-header__logo-link" href="index.html">Техномарт</a>
+            </div>
+            <div class="main-header__search-block">
+              <input class="main-header__search-field" type="search" placeholder="Поиск">
+              <svg class="main-header__search-logo" width="17" height="17"><path class="main-header__search-logo-figure" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+              </svg>
+            </div>
+            <div class="main-header__bookmarks-block">
+              <p class="main-header__bookmarks-text">Закладки <span class="main-header__bookmarks-counter">0</span></p>
+            </div>
+            <div class="main-header__cart-block">
+              <p class="main-header__cart-text">Корзина <span class="main-header__cart-counter">0</span></p>
+            </div>
+            <div class="main-header__buy-block">
+              <a class="main-header__buy-button" href="#">Оформить заказ</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-header__bottom-column">
+          <div class="centering-block centering-block--header-bottom">
+            <nav class="main-navigation">
+              <ul class="main-navigation__list">
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="index.html">Главная</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="#">Компания</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link">Каталог</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="#">Новости</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="#">Спецпредложение</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="#">Доставка</a>
+                </li>
+                <li class="main-navigation__item">
+                  <a class="main-navigation__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     <main>
       <header class="page-header centering-block">
         <ul class="page-header__breadcrumbs">
