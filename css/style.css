@@ -1652,6 +1652,13 @@ input[type="radio"].visually-hidden {
 /* Стилизация основного создержания страницы каталога */
 
 .page-header__breadcrumbs {
+  position: relative;
+  display: flex;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  padding-top: 23px;
+  padding-left: 29px;
   font-family: "PTsans", Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
@@ -1659,13 +1666,40 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.page-header__breadcrumbs::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 12px;
+  background-image: url("../img/icon-home.svg");
+}
+
+.page-header__link {
+  position: relative;
+  margin-right: 17px;
+  padding-left: 26px;
+}
+
+.page-header__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-right-small.svg");
+}
+
 .page-header__link {
   color: #000000;
 }
 
 .page-header__title {
+  margin: 0;
+  padding: 32px 0px 28px 30px;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
   color: #32425c;
   background-color: #f2f6f8;
 }
