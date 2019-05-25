@@ -102,7 +102,7 @@
         </div>
       </header>
     <main>
-      <header class="page-header centering-block">
+      <header class="page-header page-header--page-context centering-block">
         <ul class="page-header__breadcrumbs">
           <li class="page-header__item">
             <a class="page-header__link" href="#">Каталог</a>
@@ -124,7 +124,25 @@
           <form class="setup-product">
             <fieldset class="setup-product__range-block">
               <legend class="setup-product__group-title">Цена:</legend>
-              <input type="range">
+              <div class="setup-product__range-value-container">
+                <div class="setup-product__range-settings-line">
+                  <span class="visually-hidden">
+                    Поле настройки диапазона цены
+                  </span>
+                  <div class="setup-product__line-depth">
+                    <div class="setup-product__range-handle setup-product__range-handle--min-value">
+                      <span class="visually-hidden">
+                        Ползунок настройки нижней границы цен
+                      </span>
+                    </div>
+                    <div class="setup-product__range-handle setup-product__range-handle--max-value">
+                      <span class="visually-hidden">
+                        Ползунок настройки верхней границы цен
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="setup-product__range-value-container">
                 <div class="setup-product__range-min-value">
                   0
