@@ -1720,10 +1720,13 @@ input[type="radio"].visually-hidden {
 }
 
 .setup-header {
+  margin-bottom: 12px;
+  padding: 11px 0 8px 18px;
   font-family: "PTsans", Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   color: #000000;
+  background-color: #f7f3ec;
 }
 
 .setup-product {
@@ -1733,8 +1736,12 @@ input[type="radio"].visually-hidden {
 
 /* стилизация поля-позунка */
 .setup-product__range-value-container {
+  box-sizing: border-box;
+  margin-top: 42px; /* подумать над этим решением */
+  margin-bottom: 9px;
+  padding: 39px 20px;
   width: 220px;
-  min-height: 80px;
+  /* min-height: 80px; */
   background-color: #f7f3ec;
 }
 
@@ -1763,16 +1770,109 @@ input[type="radio"].visually-hidden {
 .setup-product__range-handle--max-value {
   left: 140px;
 }
+
+.setup-product__range-price-display {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.setup-product__range-price-display::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 105px;
+  width: 10px;
+  height: 1px;
+  background-color: #444444;
+}
+
+.setup-product__range-value {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  width: 95px;
+  text-align: center;
+  background-color: #f7f3ec;
+}
+
+.setup-product__range-output {
+  font-size: 17px;
+  font-family: PTSans, Arial, sans-serif;
+  color: #000000;
+}
 /* стилизация поля-позунка */
 
 
+.setup-product__group-block {
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* сброс изначальных стилей для группы полей */
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.setup-product__group-block-range-block {
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  padding-left: 2px;
+  border: none;
+}
+
+body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных стилей для группы полей */
+  display: table-cell; /* сброс изначальных стилей для группы полей */
+}
+
 .setup-product__group-title {
+  display: table; /* сброс изначальных стилей для заголовка группы полей */
+  float: left; /* сброс изначальных стилей для заголовка группы полей */
+  margin: 0; /* сброс изначальных стилей для заголовка группы полей */
+  padding: 0; /* сброс изначальных стилей для заголовка группы полей */
+  width: 100%; /* сброс изначальных стилей для заголовка группы полей */
   font-family: "PTsans", Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
+  text-transform: uppercase;
   color: #000000;
 }
+
+.setup-product__group-title--price {
+  margin-bottom: 16px;
+}
+
+.setup-product__group-block--makers-block {
+  padding-top: 15px;
+}
+
+.setup-product__makers-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 45px;
+  padding-bottom: 2px;
+  list-style: none;
+}
+
+.setup-product__makers-item {
+  display: flex;
+  margin-bottom: 17px;
+  /* padding-top: 2px; */
+  /* padding-bottom: 1px; */
+  min-height: 23px; /* поскольку для попадания в макет разница во внутренних отступах в 3 px, то лучше воспользовать минимальной высотой чем пандингами */
+}
+
+.setup-product__label-field {
+  order: 2;
+}
+
+.setup-product__makers-field {
+  order: 1;
+}
+
+.setup-product__makers-item--interskol-maker {
+  margin-bottom: 16px; /* небольшая неровность макета */
+}
+
 
 .setup-product__label-field {
   font-family: "PTSans", Arial, sans-serif;
@@ -1782,10 +1882,33 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.setup-product__group-block--charge-type {
+  margin-bottom: 60px;
+  padding-top: 18px;
+}
+
+.setup-product__charge-list {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.setup-product__charge-item {
+  margin-bottom: 16px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 .setup-product__button-show {
+  padding: 11px 38px 8px 38px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
   font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
+  text-transform: uppercase;
   color: #000000;
+  background-color: #ffffff;
 }
 
 /* стилизация блока с формой */
