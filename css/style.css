@@ -1922,16 +1922,40 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .sort-block__sort-panel {
+  display: flex;
+  padding: 11px 0;
   font-size: 13px;
   color: #000000;
   background-color: #f7f3ec;
 }
 
+.sort-block__panel-title {
+  margin: 0;
+  margin-left: 19px;
+  margin-right: 139px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 .sort-block__sort-type-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 380px;
   list-style: none;
 }
 
+.sort-block__sort-type-item--price {
+  margin-right: 71px;
+}
+
+.sort-block__sort-type-item--type {
+  margin-right: 65px;
+}
+
 .sort-block__sort-type-link {
+  border-bottom: 1px dotted #ee3643;
+  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1941,6 +1965,18 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 
 .sort-block__sort-type-link:active {
   color: #ee3643;
+}
+
+.sort-block__sort-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 22px;
+  width: 43px;
+}
+
+.sort-block__sort-button {
+  width: 11px;
+  height: 10px;
 }
 
 .item-card {

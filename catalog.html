@@ -198,19 +198,29 @@
           <header class="sort-block__sort-panel">
             <h3 class="sort-block__panel-title">Сортировка:</h3>
             <ul class="sort-block__sort-type-list">
-              <li class="sort-block__sort-type-item">
+              <li class="sort-block__sort-type-item sort-block__sort-type-item--price">
                 <a class="sort-block__sort-type-link" href="#">По цене</a>
               </li>
-              <li class="sort-block__sort-type-item">
+              <li class="sort-block__sort-type-item sort-block__sort-type-item--type">
                 <a class="sort-block__sort-type-link" href="#">По типу</a>
               </li>
-              <li class="sort-block__sort-type-item">
-                <a class="sort-block__sort-type-link" href="#">По типу</a>
+              <li class="sort-block__sort-type-item sort-block__sort-type-item--functional">
+                <a class="sort-block__sort-type-link" href="#">По функционалу</a>
               </li>
             </ul>
             <div class="sort-block__sort-buttons">
-              <a class="sort-block__sort-button-up" href="#">Сортировака товаров по возрастанию</a>
-              <a class="sort-block__sort-button-bottom" href="#">Сортировака товаров по уменьшению</a>
+              <a class="sort-block__sort-button sort-block__sort-button--button-up" href="#">
+                <span class="visually-hidden">Сортировака товаров по возрастанию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                  <path fill="#ee3643" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a>
+              <a class="sort-block__sort-button sort-block__sort-button--bottom-down" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                  <path fill="#c5c5c5" d="M5.5 10L0 0h11"/>
+                </svg>
+                <span class="visually-hidden">Сортировака товаров по уменьшению</span>
+              </a>
             </div>
           </header>
           <section class="product-line sort-block__product-line">
