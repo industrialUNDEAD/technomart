@@ -837,12 +837,14 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.top-products__item {
+.top-products__item,
+.product-line__product-item {
   margin-right: 20px;
   width: 220px;
 }
 
 .store-product {
+  position: relative; /* для позиционирования флага новинки у новых товаров */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -875,9 +877,9 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.top-products__store-product--bosch-bfg-2000 {
+/* .top-products__store-product--bosch-bfg-2000 {
   position: relative; /* для позиционирования флага новинки товара */
-}
+/* }  */
 
 .store-product__image {
   order: 1;
@@ -1977,6 +1979,22 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 .sort-block__sort-button {
   width: 11px;
   height: 10px;
+}
+
+.product-line__product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-line__product-item {
+  margin-top: 20px;
+}
+
+.product-line__product-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .item-card {
