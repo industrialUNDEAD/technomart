@@ -1529,16 +1529,104 @@ input[type="radio"].visually-hidden {
 
 /* Стилизация всплывающего окна с формой обратной связи */
 
+.modal--feedback {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -310px;
+  padding-top: 33px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 460px;
+  background: linear-gradient(to bottom, #ff5357 7px,  #ffffff 7px, #ffffff 318px, #f4f4f4 318px);
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--feedback__feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+.modal--feedback__input {
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 9px;
+  padding-left: 14px;
+  padding-bottom: 9px;
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.modal--feedback__input::placeholder {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 13px;
+  color: #a9a9a9;
+}
+
+.modal--feedback__field-item {
+  margin: 0;
+  margin-top: 22px;
+  width: 220px;
+}
+
+.modal--feedback__field-item--user-message {
+  width: 100%;
+}
+
+.modal--feedback__field-item--user-name {
+  margin-right: 20px;
+}
+
+.modal--feedback__input--message-area {
+  width: 100%;
+  min-height: 110px;
+}
+
+.modal--feedback__buttons-section {
+  width: 100%;
+}
+
+.modal--feedback__message-submit {
+  width: 100%;
+  margin-top: 74px;
+  margin-bottom: 37px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 16px;
+  right: 9px;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/close-cros.svg");
+  cursor: pointer;
+}
+
+.modal--feedback__label-field {
+  display: block;
+}
+
 .modal--feedback__label-field {
   font-size: 18px;
 }
 
-.modal--feedback__name-field::placeholder,
-.modal--feedback__mail-field::placeholder,
-.modal--feedback__message-area::placeholder {
-  font-family: "PTSans", Arial, sans-serif;
-  font-size: 13px;
-  color: #a9a9a9;
+.modal--map-location {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -470px;
+  width: 940px;
+  height: 446px; /* т.к. блок содержит только карту с фиксированными размерами, то можно задать блоку фиксированую высоту */
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 /* Стилизация страницы каталога */
@@ -1546,10 +1634,11 @@ input[type="radio"].visually-hidden {
 /* Стилазцая шапки страницы каталога */
 
 .main-header__unregistered-user {
-  display: none;
+  /* display: none; */
 }
 
 .main-header__logged-user {
+  display: none;
   width: 300px;
 }
 
