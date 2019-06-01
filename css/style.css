@@ -2016,24 +2016,49 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .setup-product__label-field {
+  z-index: 10;
+  position: relative;
   order: 2;
-}
-
-.setup-product__makers-field {
-  order: 1;
-}
-
-.setup-product__makers-item--interskol-maker {
-  margin-bottom: 16px; /* небольшая неровность макета */
-}
-
-
-.setup-product__label-field {
+  padding-left: 35px;
   font-family: "PTSans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer;
+}
+
+.setup-product__field-indicator {
+  position: absolute;
+}
+
+.setup-product__field-indicator--checkbox {
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.setup-product__field:checked + .setup-product__field-indicator--checkbox {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.setup-product__field-indicator--radio {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+}
+
+.setup-product__field:checked + .setup-product__field-indicator--radio {
+  background-image: url("../img/radio-on.svg");
+}
+
+.setup-product__charge-item {
+  display: flex;
+}
+
+.setup-product__makers-item--interskol-maker {
+  margin-bottom: 16px; /* небольшая неровность макета */
 }
 
 .setup-product__group-block--charge-type {
