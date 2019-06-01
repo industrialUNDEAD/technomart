@@ -1527,7 +1527,7 @@ input[type="radio"].visually-hidden {
   width: 112px;
 }
 
-/* Стилизация всплывающего окна с формой обратной связи */
+/* Стилизация всплывающих окон */
 
 .modal--feedback {
   display: none;
@@ -1627,6 +1627,59 @@ input[type="radio"].visually-hidden {
   width: 940px;
   height: 446px; /* т.к. блок содержит только карту с фиксированными размерами, то можно задать блоку фиксированую высоту */
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--cart-add {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -310px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 460px;
+  background: linear-gradient(to bottom, #ff5357 7px,  #ffffff 7px, #ffffff 163px, #f4f4f4 163px);
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--cart-add__title {
+  position: relative;
+  padding: 75px 46px 74px 99px;
+  text-align: center;
+  color: #000000;
+}
+
+.modal--cart-add__title::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/add-cart-icon.svg");
+}
+
+.modal--cart-add__select-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 37px;
+  width: 460px;
+  background-color: #f1f1f1;
+}
+
+.modal--cart-add__buy-complete {
+  padding-left: 59px;
+  padding-right: 62px;
+}
+
+.modal--cart-add__continue-select {
+  padding-left: 44px;
+  padding-right: 48px;
+  border-color: transparent;
+  border-radius: 2px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 /* Стилизация страницы каталога */
@@ -2181,15 +2234,3 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 /* стилизация блока резюмирования страницы */
-
-
-
-/* Стилизация модального окна добавления товара в корзину */
-
-.modal--cart-add__select-actions {
-  background-color: #f1f1f1;
-}
-
-.modal--cart-add__continue-select {
-  background-color: #ffffff;
-}
