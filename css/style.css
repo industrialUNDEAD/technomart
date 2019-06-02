@@ -1413,6 +1413,7 @@ input[type="radio"].visually-hidden {
 
 .footer-navigation__link:active,
 .main-footer__navigation-link:active {
+  text-decoration: none;
   opacity: 0.5;
 }
 
@@ -2071,7 +2072,8 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   display: none;
 }
 
-.setup-product__label-field:hover ~ .setup-product__field-indicator {
+.setup-product__makers-item:hover  .setup-product__field-indicator,
+.setup-product__charge-item:hover  .setup-product__field-indicator {
   fill: #b5b5b5;
 }
 
