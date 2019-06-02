@@ -2079,7 +2079,7 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   opacity: 0.3;
 }
 
-.setup-product__field:disabled   {
+.setup-product__field:disabled ~ .setup-product__label-field {
   opacity: 0.4;
 }
 
