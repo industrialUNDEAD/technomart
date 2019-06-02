@@ -1193,6 +1193,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.services__item:hover:not(.services__item--current) {
+  background-color: #293449;
+}
+
 .services__item--current {
   color: #32425c;
   background-color: #ffffff;
@@ -2035,22 +2039,40 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 .setup-product__field-indicator--checkbox {
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-}
-
-.setup-product__field:checked + .setup-product__field-indicator--checkbox {
-  background-image: url("../img/checkbox-on.svg");
+  /* background-image: url("../img/checkbox-off.svg"); */
+  /* background-repeat: no-repeat; */
 }
 
 .setup-product__field-indicator--radio {
   width: 25px;
   height: 25px;
-  background-image: url("../img/radio-off.svg");
+  /* background-image: url("../img/radio-off.svg"); */
 }
 
-.setup-product__field:checked + .setup-product__field-indicator--radio {
-  background-image: url("../img/radio-on.svg");
+.setup-product__field-indicator--checkbox .setup-product__checkbox-off,
+.setup-product__field-indicator--radio .setup-product__radio-off {
+  display: block;
+}
+
+.setup-product__field-indicator--checkbox .setup-product__checkbox-on,
+.setup-product__field-indicator--radio .setup-product__radio-on {
+  display: none;
+}
+
+
+.setup-product__field:checked + .setup-product__field-indicator--checkbox .setup-product__checkbox-on,
+.setup-product__field:checked + .setup-product__field-indicator--radio .setup-product__radio-on {
+  /* background-image: url("../img/checkbox-on.svg"); */
+  display: block;
+}
+
+.setup-product__field:checked + .setup-product__field-indicator--checkbox .setup-product__checkbox-off,
+.setup-product__field:checked + .setup-product__field-indicator--radio .setup-product__radio-off {
+  display: none;
+}
+
+.setup-product__label-field:hover ~ .setup-product__field-indicator > path {
+  fill: #b5b5b5;
 }
 
 .setup-product__charge-item {
@@ -2140,10 +2162,12 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .sort-block__sort-type-link:hover {
+  border-bottom: 1px solid #ee3643;
   color: rgba(0, 0, 0, 1);
 }
 
 .sort-block__sort-type-link:active {
+  border: none;
   color: #ee3643;
 }
 
@@ -2157,6 +2181,14 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 .sort-block__sort-button {
   width: 11px;
   height: 10px;
+}
+
+.sort-block__sort-button:hover .sort-block__button-figure {
+  fill: #231f20;
+}
+
+.sort-block__sort-button:active .sort-block__button-figure {
+  fill: #ee3643;
 }
 
 .sort-block__product-line {
@@ -2222,9 +2254,22 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   color: #000000;
 }
 
+.sort-block__pagination-link:hover {
+  border-color: #bdc6ca;
+}
+
+.sort-block__pagination-link--current:hover {
+  border-color: #ee3643;;
+}
+
+.sort-block__pagination-link:active {
+  border-color: #ee3643;
+}
+
 .sort-block__pagination-link--current {
   color: #ffffff;
   background-color: #ee3643;
+  border-color: #ee3643;
 }
 
 .sort-block__pagination-link--next {
