@@ -2049,30 +2049,38 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   /* background-image: url("../img/radio-off.svg"); */
 }
 
-.setup-product__field-indicator--checkbox .setup-product__checkbox-off,
-.setup-product__field-indicator--radio .setup-product__radio-off {
+.setup-product__field-indicator--checkbox-off,
+.setup-product__field-indicator--radio-off {
   display: block;
 }
 
-.setup-product__field-indicator--checkbox .setup-product__checkbox-on,
-.setup-product__field-indicator--radio .setup-product__radio-on {
+.setup-product__field-indicator--checkbox-on,
+.setup-product__field-indicator--radio-on {
   display: none;
 }
 
 
-.setup-product__field:checked + .setup-product__field-indicator--checkbox .setup-product__checkbox-on,
-.setup-product__field:checked + .setup-product__field-indicator--radio .setup-product__radio-on {
+.setup-product__field:checked + .setup-product__field-indicator--checkbox-on,
+.setup-product__field:checked + .setup-product__field-indicator--radio-on {
   /* background-image: url("../img/checkbox-on.svg"); */
   display: block;
 }
 
-.setup-product__field:checked + .setup-product__field-indicator--checkbox .setup-product__checkbox-off,
-.setup-product__field:checked + .setup-product__field-indicator--radio .setup-product__radio-off {
+.setup-product__field:checked + .setup-product__field-indicator--checkbox-off,
+.setup-product__field:checked + .setup-product__field-indicator--radio-off {
   display: none;
 }
 
-.setup-product__label-field:hover ~ .setup-product__field-indicator > path {
+.setup-product__label-field:hover ~ .setup-product__field-indicator {
   fill: #b5b5b5;
+}
+
+.setup-product__field:disabled ~ .setup-product__field-indicator {
+  opacity: 0.3;
+}
+
+.setup-product__field:disabled   {
+  opacity: 0.4;
 }
 
 .setup-product__charge-item {
