@@ -1193,6 +1193,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.services__item:hover:not(.services__item--current) {
+  background-color: #293449;
+}
+
 .services__item--current {
   color: #32425c;
   background-color: #ffffff;
@@ -1409,6 +1413,7 @@ input[type="radio"].visually-hidden {
 
 .footer-navigation__link:active,
 .main-footer__navigation-link:active {
+  text-decoration: none;
   opacity: 0.5;
 }
 
@@ -1527,18 +1532,159 @@ input[type="radio"].visually-hidden {
   width: 112px;
 }
 
-/* Стилизация всплывающего окна с формой обратной связи */
+/* Стилизация всплывающих окон */
+
+.modal--feedback {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -310px;
+  padding-top: 33px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 460px;
+  background: linear-gradient(to bottom, #ff5357 7px,  #ffffff 7px, #ffffff 318px, #f4f4f4 318px);
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--feedback__feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+.modal--feedback__input {
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 9px;
+  padding-left: 14px;
+  padding-bottom: 9px;
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.modal--feedback__input::placeholder {
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 13px;
+  color: #a9a9a9;
+}
+
+.modal--feedback__field-item {
+  margin: 0;
+  margin-top: 22px;
+  width: 220px;
+}
+
+.modal--feedback__field-item--user-message {
+  width: 100%;
+}
+
+.modal--feedback__field-item--user-name {
+  margin-right: 20px;
+}
+
+.modal--feedback__input--message-area {
+  width: 100%;
+  min-height: 110px;
+}
+
+.modal--feedback__buttons-section {
+  width: 100%;
+}
+
+.modal--feedback__message-submit {
+  width: 100%;
+  margin-top: 74px;
+  margin-bottom: 37px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 16px;
+  right: 9px;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/close-cros.svg");
+  cursor: pointer;
+}
+
+.modal--feedback__label-field {
+  display: block;
+}
 
 .modal--feedback__label-field {
   font-size: 18px;
 }
 
-.modal--feedback__name-field::placeholder,
-.modal--feedback__mail-field::placeholder,
-.modal--feedback__message-area::placeholder {
-  font-family: "PTSans", Arial, sans-serif;
-  font-size: 13px;
-  color: #a9a9a9;
+.modal--map-location {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -470px;
+  width: 940px;
+  height: 446px; /* т.к. блок содержит только карту с фиксированными размерами, то можно задать блоку фиксированую высоту */
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--cart-add {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -310px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 460px;
+  background: linear-gradient(to bottom, #ff5357 7px,  #ffffff 7px, #ffffff 163px, #f4f4f4 163px);
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--cart-add__title {
+  position: relative;
+  padding: 75px 46px 74px 99px;
+  text-align: center;
+  color: #000000;
+}
+
+.modal--cart-add__title::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/add-cart-icon.svg");
+}
+
+.modal--cart-add__select-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 37px;
+  width: 460px;
+  background-color: #f1f1f1;
+}
+
+.modal--cart-add__buy-complete {
+  padding-left: 59px;
+  padding-right: 62px;
+}
+
+.modal--cart-add__continue-select {
+  padding-left: 44px;
+  padding-right: 48px;
+  border-color: transparent;
+  border-radius: 2px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 /* Стилизация страницы каталога */
@@ -1546,10 +1692,11 @@ input[type="radio"].visually-hidden {
 /* Стилазцая шапки страницы каталога */
 
 .main-header__unregistered-user {
-  display: none;
+  /* display: none; */
 }
 
 .main-header__logged-user {
+  display: none;
   width: 300px;
 }
 
@@ -1874,24 +2021,76 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .setup-product__label-field {
+  z-index: 10;
+  position: relative;
   order: 2;
-}
-
-.setup-product__makers-field {
-  order: 1;
-}
-
-.setup-product__makers-item--interskol-maker {
-  margin-bottom: 16px; /* небольшая неровность макета */
-}
-
-
-.setup-product__label-field {
+  padding-left: 35px;
   font-family: "PTSans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer;
+}
+
+.setup-product__field-indicator {
+  position: absolute;
+}
+
+.setup-product__field-indicator--checkbox {
+  width: 27px;
+  height: 23px;
+  /* background-image: url("../img/checkbox-off.svg"); */
+  /* background-repeat: no-repeat; */
+}
+
+.setup-product__field-indicator--radio {
+  width: 25px;
+  height: 25px;
+  /* background-image: url("../img/radio-off.svg"); */
+}
+
+.setup-product__field-indicator--checkbox-off,
+.setup-product__field-indicator--radio-off {
+  display: block;
+}
+
+.setup-product__field-indicator--checkbox-on,
+.setup-product__field-indicator--radio-on {
+  display: none;
+}
+
+
+.setup-product__field:checked + .setup-product__field-indicator--checkbox-on,
+.setup-product__field:checked + .setup-product__field-indicator--radio-on {
+  /* background-image: url("../img/checkbox-on.svg"); */
+  display: block;
+}
+
+.setup-product__field:checked + .setup-product__field-indicator--checkbox-off,
+.setup-product__field:checked + .setup-product__field-indicator--radio-off {
+  display: none;
+}
+
+.setup-product__makers-item:hover  .setup-product__field-indicator,
+.setup-product__charge-item:hover  .setup-product__field-indicator {
+  fill: #b5b5b5;
+}
+
+.setup-product__field:disabled ~ .setup-product__field-indicator {
+  opacity: 0.3;
+}
+
+.setup-product__field:disabled ~ .setup-product__label-field {
+  opacity: 0.4;
+}
+
+.setup-product__charge-item {
+  display: flex;
+}
+
+.setup-product__makers-item--interskol-maker {
+  margin-bottom: 16px; /* небольшая неровность макета */
 }
 
 .setup-product__group-block--charge-type {
@@ -1973,10 +2172,12 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .sort-block__sort-type-link:hover {
+  border-bottom: 1px solid #ee3643;
   color: rgba(0, 0, 0, 1);
 }
 
 .sort-block__sort-type-link:active {
+  border: none;
   color: #ee3643;
 }
 
@@ -1990,6 +2191,14 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 .sort-block__sort-button {
   width: 11px;
   height: 10px;
+}
+
+.sort-block__sort-button:hover .sort-block__button-figure {
+  fill: #231f20;
+}
+
+.sort-block__sort-button:active .sort-block__button-figure {
+  fill: #ee3643;
 }
 
 .sort-block__product-line {
@@ -2055,9 +2264,22 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   color: #000000;
 }
 
+.sort-block__pagination-link:hover {
+  border-color: #bdc6ca;
+}
+
+.sort-block__pagination-link--current:hover {
+  border-color: #ee3643;;
+}
+
+.sort-block__pagination-link:active {
+  border-color: #ee3643;
+}
+
 .sort-block__pagination-link--current {
   color: #ffffff;
   background-color: #ee3643;
+  border-color: #ee3643;
 }
 
 .sort-block__pagination-link--next {
@@ -2092,15 +2314,3 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 /* стилизация блока резюмирования страницы */
-
-
-
-/* Стилизация модального окна добавления товара в корзину */
-
-.modal--cart-add__select-actions {
-  background-color: #f1f1f1;
-}
-
-.modal--cart-add__continue-select {
-  background-color: #ffffff;
-}
