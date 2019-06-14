@@ -1775,12 +1775,20 @@ input[type="radio"].visually-hidden {
 /* Стилазцая шапки страницы каталога */
 
 .main-header__unregistered-user {
-  /* display: none; */
+  display: block;
+}
+
+.main-header__unregistered-user--off {
+  display: none;
 }
 
 .main-header__logged-user {
   display: none;
   width: 300px;
+}
+
+.main-header__logged-user--on {
+  display: block;
 }
 
 .main-header__logged-user-list { /* 51px */
