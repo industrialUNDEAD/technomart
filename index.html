@@ -140,7 +140,7 @@
                   <span class="visually-hidden">Следующий слайд</span>
                 </button>
               </div>
-              <a class="product-slider__slide-link button" href="#">Открыть каталог</a>
+              <a class="product-slider__slide-link button" href="catalog.html">Открыть каталог</a>
               <div class="product-slider__toggle-block">
                 <label class="product-slider__toggle-slide product-slider__toggle-slide--perforator-toggle" for="perforator-slide">
                   <span class="visually-hidden">Открыть слайд с перфораторами</span>
@@ -343,7 +343,7 @@
               заехав в наш офис:
           </p>
           <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте">
-          <button class="contacts__modal-open button" type="button">Заблудились? Напишиту нам!</button>
+          <button class="contacts__modal-open button" type="button">Заблудились? Напишите нам!</button>
         </section>
       </article>
     </main>
@@ -434,26 +434,28 @@
     </footer>
     <section class="modal modal--feedback">
       <h2 class="visually-hidden">Окно отправки сообщения</h2>
-      <form class="modal--feedback__feedback-form">
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-name">
-          <label class="modal--feedback__label-field" for="name-field">Ваше имя:</label>
-          <input class="modal--feedback__input modal--feedback__input--name-field" type="text" id="name-field" placeholder="Имя Фамилия">
-        </p>
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-mail">
-          <label class="modal--feedback__label-field" for="mail-field">Ваш e-mail:</label>
-          <input class="modal--feedback__input modal--feedback__input--mail-field" type="email" id="mail-field" placeholder="email@example.com">
-        </p>
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-message">
-          <label class="modal--feedback__label-field" for="message-area">Текст письма:</label>
-          <textarea class="modal--feedback__input modal--feedback__input--message-area" id="message-area" placeholder="В свободной форме"></textarea>
-        </p>
-        <div class="modal--feedback__buttons-section">
-          <button class="modal--feedback__message-submit button" type="submit">Отправить</button>
-          <button class="modal__button-close" type="button">
-            <span class="visually-hidden">Закрыть окно</span>
-          </button>
-        </div>
-      </form>
+      <div class="modal--feedback-content">
+        <form class="modal--feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-name">
+            <label class="modal--feedback__label-field" for="name-field">Ваше имя:</label>
+            <input class="modal--feedback__input modal--feedback__input--name-field" type="text" name="userName" id="name-field" placeholder="Имя Фамилия">
+          </p>
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-mail">
+            <label class="modal--feedback__label-field" for="mail-field">Ваш e-mail:</label>
+            <input class="modal--feedback__input modal--feedback__input--mail-field" type="email" name="userMail" id="mail-field" placeholder="email@example.com">
+          </p>
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-message">
+            <label class="modal--feedback__label-field" for="message-area">Текст письма:</label>
+            <textarea class="modal--feedback__input modal--feedback__input--message-area" name="userMessage" id="message-area" placeholder="В свободной форме"></textarea>
+          </p>
+          <div class="modal--feedback__buttons-section">
+            <button class="modal--feedback__message-submit button" type="submit">Отправить</button>
+            <button class="modal__button-close" type="button">
+              <span class="visually-hidden">Закрыть окно</span>
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
     <section class="modal modal--map-location">
       <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -472,5 +474,6 @@
         <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
       </div>
     </section>
+  <script src="js/modal-feedback.js"></script>
   </body>
 </html>

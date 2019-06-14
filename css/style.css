@@ -1534,8 +1534,82 @@ input[type="radio"].visually-hidden {
 
 /* Стилизация всплывающих окон */
 
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes border-error {
+  10% {
+    border-color:rgba(255, 0, 0, 0.2);
+  }
+
+  50% {
+    border-color:rgba(255, 0, 0, 0.5);
+  }
+
+  100% {
+    border-color: rgba(255, 0, 0, 1);
+  }
+}
+
 .modal--feedback {
   display: none;
+}
+
+.overlay-active {
+  z-index: 10;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  animation: bounce 0.6s;
+}
+
+.modal--feedback-content {
   z-index: 100;
   position: fixed;
   top: 150px;
@@ -1547,6 +1621,10 @@ input[type="radio"].visually-hidden {
   width: 460px;
   background: linear-gradient(to bottom, #ff5357 7px,  #ffffff 7px, #ffffff 318px, #f4f4f4 318px);
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal--feedback-open {
+  display: flex;
 }
 
 .modal--feedback__feedback-form {
@@ -1620,6 +1698,11 @@ input[type="radio"].visually-hidden {
 
 .modal--feedback__label-field {
   font-size: 18px;
+}
+
+.modal-error {
+  animation: border-error 0.6s;
+  border-color: red;
 }
 
 .modal--map-location {
