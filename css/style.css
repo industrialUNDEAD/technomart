@@ -295,20 +295,24 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.main-header__search-field:focus {
+.main-header__search-field:focus,
+.main-header__search-field--text-add {
   color: #000000;
   background-color: #ffffff;
 }
 
-.main-header__search-field:hover + .main-header__search-logo {
+.main-header__search-field:hover + .main-header__search-logo,
+.main-header__search-field--text-add + .main-header__search-logo {
   opacity: 1;
 }
 
-.main-header__search-field:focus + .main-header__search-logo {
+.main-header__search-field:focus + .main-header__search-logo,
+.main-header__search-field--text-add + .main-header__search-logo{
   opacity: 1;
 }
 
-.main-header__search-field:focus + .main-header__search-logo .main-header__search-logo-figure { /* подсвечивание иконки поиска при фокусе на поле поиска */
+.main-header__search-field:focus + .main-header__search-logo .main-header__search-logo-figure,
+.main-header__search-field--text-add + .main-header__search-logo .main-header__search-logo-figure { /* подсвечивание иконки поиска при фокусе на поле поиска */
   fill: #ee3643;
 }
 
@@ -360,9 +364,9 @@ input[type="radio"].visually-hidden {
   padding-right: 28px;
 }
 
-.main-header__cart-block.main-header__cart-text--product-add { /* установлен такой селектор, что бы фон мог появиться только у блока с корзиной */
+/* .main-header__cart-text--product-add {
   background-color: #ee3643;
-}
+} */
 
 .main-header__cart-block {
   width: 122px;
@@ -414,6 +418,16 @@ input[type="radio"].visually-hidden {
 .main-header__bookmarks-text:active,
 .main-header__cart-text:active {
   opacity: 0.6;
+}
+
+.main-header__cart-block--product-add,
+.main-header__bookmarks-block--bookmark-add {
+  background-color: #ee3643;
+}
+
+.main-header__counter { /* это правило для удобного расположения счетчика, особенно если его значение будет больше 20 */
+  position: absolute;
+  padding-left: 5px;
 }
 
 /* Верхняя колонка шапки */
