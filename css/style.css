@@ -682,7 +682,15 @@ input[type="radio"].visually-hidden {
 }
 
 .product-slider__drills-slide {
-  /* display: none; */
+  display: none;
+}
+
+.product-slider__perforators-slide--button-active {
+  display: block;
+}
+
+.product-slider__drills-slide--button-active {
+  display: block;
 }
 
 .product-slider__slide-title {
