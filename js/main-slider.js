@@ -1,7 +1,12 @@
 var drillsSlide = document.querySelector(".product-slider__drills-slide");
 var perforatorsSlide = document.querySelector(".product-slider__perforators-slide")
 var buttonsToogle = document.querySelectorAll(".product-slider__button");
-var subToggles = document.querySelectorAll(".product-slider__toggle-slide");
+var perforatorToggle = document.querySelector(".product-slider__toggle-slide--perforator-toggle");
+var drillToggle = document.querySelector(".product-slider__toggle-slide--drill-toggle");
+var perforatorRadio = document.querySelector("#perforator-slide");
+var drillRadio = document.querySelector("#drill-slide");
+
+
 
 var toogleSlider = function (toggleEl) {
   toggleEl.addEventListener("click", function () {
@@ -24,15 +29,27 @@ var editRender = function (node) {
   }
 };
 
-var toogleButton = function (button) {
-  button.addEventListener("click", function () {
-    perforatorsSlide.classList.toggle("active");
-    drillsSlide.classList.toggle("active");
-    editRender(perforatorsSlide);
-    editRender(drillsSlide);
-  });
+var toggleButton = function (slideRemove, slideAdd) {
+  slideRemove.style.display = "none";
+  slideAdd.style.display = "block";
 };
 
-for(var i =0; i < subToggles.length; i++) {
-  toogleButton(subToggles[i]);
-};
+perforatorToggle.addEventListener("click", function () {
+  toggleButton(drillsSlide, perforatorsSlide);
+});
+
+perforatorToggle.addEventListener("focus", function () { /* для переключения вспомогательных кнопок клавиатурой */
+  toggleButton(drillsSlide, perforatorsSlide);
+  drillRadio.removeAttribute("checked");
+  perforatorRadio.setAttribute("checked", "checked");
+});
+
+drillToggle.addEventListener("click", function () {
+  toggleButton(perforatorsSlide, drillsSlide);
+});
+
+drillToggle.addEventListener("focus", function () { /* для переключения вспомогательных кнопок клавиатурой */
+  toggleButton(perforatorsSlide, drillsSlide);
+  perforatorRadio.removeAttribute("checked");
+  drillRadio.setAttribute("checked", "checked");
+});

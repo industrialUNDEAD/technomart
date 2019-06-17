@@ -781,8 +781,9 @@ input[type="radio"].visually-hidden {
   width: 6px;
   height: 6px;
   background-color: #ee3643;
-  border-radius: 50%;
+  border-radius: 50%
 }
+
 
 #perforator-slide:checked ~ .product-slider__drills-slide {
   display: none;
