@@ -30,7 +30,6 @@ buttonOpenModal.addEventListener("keydown", function (evt) {
 })
 
 var openModal = function () {
-  debugger;
   modalFeedBack.classList.add("overlay-active");
   if (storageName) {
     userNameField.value = storageName;
