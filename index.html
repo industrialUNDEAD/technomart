@@ -342,7 +342,7 @@
               Вы можете забрать товар сами,
               заехав в наш офис:
           </p>
-          <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте">
+          <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте" tabindex="0">
           <button class="contacts__modal-open button" type="button">Заблудились? Напишите нам!</button>
         </section>
       </article>
@@ -458,11 +458,15 @@
       </div>
     </section>
     <section class="modal modal--map-location">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img class="modal--map-location__map-image" src="img/big-map.jpg" width="940" height="446" alt="Наше расположение на карте">
-      <button class="modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
+      <div class="modal--location-content">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe class="modal--map-location__map-yandex" src="https://yandex.ru/map-widget/v1/-/CCS~zHPq" width="940" height="446" frameborder="1" allowfullscreen="true">
+        </iframe>
+        <img class="modal--map-location__map-image" src="img/big-map.jpg" width="940" height="446" alt="Наше расположение на карте">
+        <button class="modal__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+      </div>
     </section>
     <section class="modal modal--cart-add">
       <h2 class="visually-hidden">Окно перехода к корзине покупок</h2>
@@ -481,5 +485,6 @@
   <script src="js/authorization.js"></script>
   <script src="js/product-actions.js"></script>
   <script src="js/main-slider.js"></script>
+  <script src="js/modal-map.js"></script>
   </body>
 </html>
