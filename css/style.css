@@ -1138,7 +1138,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services__description-item--delivery {
-  display: block;
+  display: none;
 }
 
 .services__description-item--delivery::after {
@@ -1178,6 +1178,10 @@ input[type="radio"].visually-hidden {
   padding-left: 44px;
   width: 195px;
   padding-right: 44px;
+}
+
+.services__description-item--current {
+  display: block;
 }
 
 .services__main-content {
