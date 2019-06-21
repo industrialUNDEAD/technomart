@@ -7,7 +7,7 @@ var bookmarksBlock = document.querySelector(".main-header__bookmarks-block");
 var searchInput = document.querySelector(".main-header__search-field");
 var modalCartContent = document.querySelector(".modal--cart-add-content");
 var modalCartContainer = document.querySelector(".modal--cart-add");
-var buttonClose = document.querySelectorAll(".modal__button-close");
+var buttonClose = modalCartContent.querySelector(".modal__button-close");
 var buttonContinue = document.querySelector(".modal--cart-add__continue-select");
 
 var addCountAction = function(button, classContain, classAdd, blockCounter) {
@@ -52,11 +52,11 @@ var modalClose = function () {
   modalCartContainer.classList.remove("overlay-active");
 };
 
-buttonClose[2].addEventListener("click", function () {
+buttonClose.addEventListener("click", function () {
   modalClose();
 });
 
-buttonClose[2].addEventListener("keydonw", function (evt) {
+buttonClose.addEventListener("keydonw", function (evt) {
   if (evt.keyCode === 13) {
     modalClose();;
   };
