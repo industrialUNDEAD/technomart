@@ -61,10 +61,10 @@
               </svg>
             </div>
             <div class="main-header__bookmarks-block">
-              <p class="main-header__bookmarks-text">Закладки <span class="main-header__bookmarks-counter">0</span></p>
+              <p class="main-header__bookmarks-text">Закладки <span class="main-header__counter main-header__counter--bookmarks-counter">0</span></p>
             </div>
             <div class="main-header__cart-block">
-              <p class="main-header__cart-text">Корзина <span class="main-header__cart-counter">0</span></p>
+              <p class="main-header__cart-text">Корзина <span class="main-header__counter main-header__counter--cart-counter">0</span></p>
             </div>
             <div class="main-header__buy-block">
               <a class="main-header__buy-button" href="#">Оформить заказ</a>
@@ -126,7 +126,7 @@
           <div class="setup-header">
             <span class="setup-header__title">Фильтр:</span>
           </div>
-          <form class="setup-product">
+          <form class="setup-product" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="setup-product__group-block setup-product__group-block-range-block">
               <legend class="setup-product__group-title setup-product__group-title--price">Цена:</legend>
               <div class="setup-product__range-value-container">
@@ -487,14 +487,20 @@
       </div>
     </footer>
     <section class="modal modal--cart-add">
-      <button class="modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-      <h2 class="modal--cart-add__title">Товар добавлен в корзину!</h2>
-      <div class="modal--cart-add__select-actions">
-        <a class="modal--cart-add__buy-complete button" href="#">Оформить заказ</a>
-        <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
+      <h2 class="visually-hidden">Окно перехода к корзине покупок</h2>
+      <div class="modal--cart-add-content">
+        <button class="modal__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <h2 class="modal--cart-add__title">Товар добавлен в корзину!</h2>
+        <div class="modal--cart-add__select-actions">
+          <a class="modal--cart-add__buy-complete button" href="#">Оформить заказ</a>
+          <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
+        </div>
       </div>
     </section>
+  <script src="js/authorization.js"></script>
+  <script src="js/product-actions.js"></script>
+  <script src="js/page-switch.js"></script>
   </body>
 </html>

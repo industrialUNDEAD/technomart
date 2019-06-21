@@ -61,10 +61,10 @@
             </svg>
           </div>
           <div class="main-header__bookmarks-block">
-            <p class="main-header__bookmarks-text">Закладки <span class="main-header__bookmarks-counter">0</span></p>
+            <p class="main-header__bookmarks-text">Закладки <span class="main-header__counter main-header__counter--bookmarks-counter">0</span></p>
           </div>
           <div class="main-header__cart-block">
-            <p class="main-header__cart-text">Корзина <span class="main-header__cart-counter">0</span></p>
+            <p class="main-header__cart-text">Корзина <span class="main-header__counter main-header__counter--cart-counter">0</span></p>
           </div>
           <div class="main-header__buy-block">
             <a class="main-header__buy-button" href="#">Оформить заказ</a>
@@ -127,7 +127,7 @@
                 <p class="product-slider__slide-slogan">Настоящие мужские игрушки</p>
                 <img class="product-slider__slide-image" src="img/perforator-slide.jpg" width="620" height="226" alt="Изображение строителя с перфоратором">
               </div>
-              <div class="product-slider__drills-slide">
+              <div class="product-slider__drills-slide active">
                 <h4 class="product-slider__slide-title">Дрели</h4>
                 <p class="product-slider__slide-slogan">Соседям на радость!</p>
                 <img class="product-slider__slide-image" src="img/drill-slide.jpg" width="620" height="266" alt="Изображение строителя с дрелью">
@@ -140,12 +140,12 @@
                   <span class="visually-hidden">Следующий слайд</span>
                 </button>
               </div>
-              <a class="product-slider__slide-link button" href="#">Открыть каталог</a>
+              <a class="product-slider__slide-link button" href="catalog.html">Открыть каталог</a>
               <div class="product-slider__toggle-block">
-                <label class="product-slider__toggle-slide product-slider__toggle-slide--perforator-toggle" for="perforator-slide">
+                <label class="product-slider__toggle-slide product-slider__toggle-slide--perforator-toggle" for="perforator-slide" tabindex="0">
                   <span class="visually-hidden">Открыть слайд с перфораторами</span>
                 </label>
-                <label class="product-slider__toggle-slide product-slider__toggle-slide--drill-toggle" for="drill-slide">
+                <label class="product-slider__toggle-slide product-slider__toggle-slide--drill-toggle" for="drill-slide" tabindex="0">
                   <span class="visually-hidden">Открыть слайд с дрелями</span>
                 </label>
               </div>
@@ -276,12 +276,12 @@
           </header>
           <div class="services__main-content">
             <ul class="services__list">
-              <li class="services__item services__item--current">Доставка</li>
-              <li class="services__item">Гарантия</li>
-              <li class="services__item">Кредит</li>
+              <li class="services__item services__item--delivery services__item--current" tabindex="0">Доставка</li>
+              <li class="services__item services__item--guarantee" tabindex="0">Гарантия</li>
+              <li class="services__item services__item--credit" tabindex="0">Кредит</li>
             </ul>
             <div class="services__list-description">
-              <div class="services__description-item services__description-item--delivery">
+              <div class="services__description-item services__description-item--delivery services__description-item--current">
                 <h3 class="services__item-title">Доставка</h3>
                 <p class="services__item-description">
                   Мы с удовольствием доставим ваш товар прямо<br>
@@ -342,8 +342,8 @@
               Вы можете забрать товар сами,
               заехав в наш офис:
           </p>
-          <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте">
-          <button class="contacts__modal-open button" type="button">Заблудились? Напишиту нам!</button>
+          <img class="contacts__map-location" src="img/map-mini.jpg" width="300" height="158" alt="Расположение нашего офиса на карте" tabindex="0">
+          <button class="contacts__modal-open button" type="button">Заблудились? Напишите нам!</button>
         </section>
       </article>
     </main>
@@ -434,43 +434,58 @@
     </footer>
     <section class="modal modal--feedback">
       <h2 class="visually-hidden">Окно отправки сообщения</h2>
-      <form class="modal--feedback__feedback-form">
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-name">
-          <label class="modal--feedback__label-field" for="name-field">Ваше имя:</label>
-          <input class="modal--feedback__input modal--feedback__input--name-field" type="text" id="name-field" placeholder="Имя Фамилия">
-        </p>
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-mail">
-          <label class="modal--feedback__label-field" for="mail-field">Ваш e-mail:</label>
-          <input class="modal--feedback__input modal--feedback__input--mail-field" type="email" id="mail-field" placeholder="email@example.com">
-        </p>
-        <p class="modal--feedback__field-item modal--feedback__field-item--user-message">
-          <label class="modal--feedback__label-field" for="message-area">Текст письма:</label>
-          <textarea class="modal--feedback__input modal--feedback__input--message-area" id="message-area" placeholder="В свободной форме"></textarea>
-        </p>
-        <div class="modal--feedback__buttons-section">
-          <button class="modal--feedback__message-submit button" type="submit">Отправить</button>
-          <button class="modal__button-close" type="button">
-            <span class="visually-hidden">Закрыть окно</span>
-          </button>
-        </div>
-      </form>
-    </section>
-    <section class="modal modal--map-location">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img class="modal--map-location__map-image" src="img/big-map.jpg" width="940" height="446" alt="Наше расположение на карте">
-      <button class="modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-    </section>
-    <section class="modal modal--cart-add">
-      <button class="modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-      <h2 class="modal--cart-add__title">Товар добавлен в корзину!</h2>
-      <div class="modal--cart-add__select-actions">
-        <a class="modal--cart-add__buy-complete button" href="#">Оформить заказ</a>
-        <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
+      <div class="modal--feedback-content">
+        <form class="modal--feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-name">
+            <label class="modal--feedback__label-field" for="name-field">Ваше имя:</label>
+            <input class="modal--feedback__input modal--feedback__input--name-field" type="text" name="userName" id="name-field" placeholder="Имя Фамилия">
+          </p>
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-mail">
+            <label class="modal--feedback__label-field" for="mail-field">Ваш e-mail:</label>
+            <input class="modal--feedback__input modal--feedback__input--mail-field" type="email" name="userMail" id="mail-field" placeholder="email@example.com">
+          </p>
+          <p class="modal--feedback__field-item modal--feedback__field-item--user-message">
+            <label class="modal--feedback__label-field" for="message-area">Текст письма:</label>
+            <textarea class="modal--feedback__input modal--feedback__input--message-area" name="userMessage" id="message-area" placeholder="В свободной форме"></textarea>
+          </p>
+          <div class="modal--feedback__buttons-section">
+            <button class="modal--feedback__message-submit button" type="submit">Отправить</button>
+            <button class="modal__button-close" type="button">
+              <span class="visually-hidden">Закрыть окно</span>
+            </button>
+          </div>
+        </form>
       </div>
     </section>
+    <section class="modal modal--map-location">
+      <div class="modal--location-content">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe class="modal--map-location__map-yandex" src="https://yandex.ru/map-widget/v1/-/CCS~zHPq" width="940" height="446" frameborder="1" allowfullscreen="true">
+        </iframe>
+        <img class="modal--map-location__map-image" src="img/big-map.jpg" width="940" height="446" alt="Наше расположение на карте">
+        <button class="modal__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+      </div>
+    </section>
+    <section class="modal modal--cart-add">
+      <h2 class="visually-hidden">Окно перехода к корзине покупок</h2>
+      <div class="modal--cart-add-content">
+        <button class="modal__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <h2 class="modal--cart-add__title">Товар добавлен в корзину!</h2>
+        <div class="modal--cart-add__select-actions">
+          <a class="modal--cart-add__buy-complete button" href="#">Оформить заказ</a>
+          <button class="modal--cart-add__continue-select" type="button">Продолжить покупки</button>
+        </div>
+      </div>
+    </section>
+  <script src="js/modal-feedback.js"></script>
+  <script src="js/authorization.js"></script>
+  <script src="js/product-actions.js"></script>
+  <script src="js/main-slider.js"></script>
+  <script src="js/modal-map.js"></script>
+  <script src="js/services.js"></script>
   </body>
 </html>
