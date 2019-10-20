@@ -7,8 +7,12 @@ var bookmarksBlock = document.querySelector(".main-header__bookmarks-block");
 var searchInput = document.querySelector(".main-header__search-field");
 var modalCartContent = document.querySelector(".modal--cart-add-content");
 var modalCartContainer = document.querySelector(".modal--cart-add");
-var buttonClose = modalCartContent.querySelector(".modal__button-close");
+var buttonCloseCard = modalCartContent.querySelector(".modal__button-close");
 var buttonContinue = document.querySelector(".modal--cart-add__continue-select");
+var shopLogoLink = document.querySelector(".main-header__logo-link");
+var shopLogoBlock = document.querySelector(".main-header__logo-block");
+var cardTitle = modalCartContainer.querySelector("h2");
+var makingPurchase = document.querySelector(".modal--cart-add__buy-complete");
 
 var addCountAction = function(button, classContain, classAdd, blockCounter) {
   button.addEventListener("click", function () {
@@ -19,6 +23,7 @@ var addCountAction = function(button, classContain, classAdd, blockCounter) {
       modalCartContent.classList.add("modal--cart-show");
       modalCartContainer.classList.add("overlay-active");
       buttonContinue.focus();
+      document.body.style.overflow = 'hidden';
     }
     updateCounter(blockCounter);
   });
@@ -50,17 +55,23 @@ searchInput.addEventListener("focusout", function () { /* для удобств�
 var modalClose = function () {
   modalCartContent.classList.remove("modal--cart-show");
   modalCartContainer.classList.remove("overlay-active");
+  document.body.style.overflow = 'auto';
 };
 
-buttonClose.addEventListener("click", function () {
+buttonCloseCard.addEventListener("click", function () {
   modalClose();
 });
 
-buttonClose.addEventListener("keydonw", function (evt) {
-  if (evt.keyCode === 13) {
-    modalClose();;
+buttonCloseCard.addEventListener("keydown", function (KeyboardEvent) {
+  if (KeyboardEvent.keyCode === 13) {
+    modalClose();
   };
-})
+  if (KeyboardEvent.keyCode === 9) {
+    if (KeyboardEvent.shiftKey) {
+      makingPurchase.focus();
+    }
+  }
+});
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -73,8 +84,30 @@ buttonContinue.addEventListener("click", function () {
   modalClose();
 });
 
-buttonContinue.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 13) {
-    modalClose();;
+buttonContinue.addEventListener("keydown", function (KeyboardEvent) {
+  if (KeyboardEvent.keyCode === 13) {
+    modalClose();
   };
+  if (KeyboardEvent.keyCode === 9) {
+    cardTitle.focus();
+    if (KeyboardEvent.shiftKey) {
+      makingPurchase.focus();
+    }
+  }
+});
+// var test = buttonCloseCard.focus();
+
+// buttonContinue.addEventListener("keydown", function (evt) {
+//   if (evt.keyCode === 9) {
+//     buttonCloseCard.focus();
+//   };
+// })
+
+shopLogoLink.addEventListener("focus", function () {
+  shopLogoBlock.style.background = "#ca2c37";
 })
+
+shopLogoLink.addEventListener("blur", function () {
+  shopLogoBlock.style.background = "#ee3643";
+})
+

@@ -76,8 +76,10 @@ img { /* универсальное правило для того, что бы 
   border-radius: 2px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #ca2c37;
+  outline: none;
 }
 
 .button:active {
@@ -91,8 +93,8 @@ img { /* универсальное правило для того, что бы 
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -181,9 +183,6 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__user-navigation {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
   width: 281px;
   margin: 0;
   padding: 0;
@@ -227,11 +226,14 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.main-header__user-navigation-link:hover {
+.main-header__user-navigation-link:hover,
+.main-header__user-navigation-link:focus {
+  outline: none;
   color: #ee3643;
 }
 
-.main-header__user-navigation-link:hover::before {
+.main-header__user-navigation-link:hover::before,
+.main-header__user-navigation-link:focus::before {
   opacity: 1;
 }
 
@@ -279,6 +281,10 @@ input[type="radio"].visually-hidden {
   padding-left: 49px;
   padding-bottom: 13px;
   border: 0;
+  font-family: "Cuprum", Arial, sans-serif; /* персональная стилизация шрифта у элементов форм */
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
   background-color: #293449;
 }
 
@@ -299,6 +305,7 @@ input[type="radio"].visually-hidden {
 .main-header__search-field--text-add {
   color: #000000;
   background-color: #ffffff;
+  outline: none;
 }
 
 .main-header__search-field:hover + .main-header__search-logo,
@@ -317,8 +324,6 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header__search-field::placeholder { /* Персональная стилизация подписи в поле-поиска*/
-  font-size: 17px;
-  line-height: 18px;
   color: #ffffff;
 }
 
@@ -354,6 +359,11 @@ input[type="radio"].visually-hidden {
   color: #ffffff; /* Для стилизации ссылки на странице каталога */
 }
 
+.main-header__logo-link:focus {
+  background-color: #ca2c37;
+  outline: none;
+}
+
 .main-header__cart-block,
 .main-header__bookmarks-block {
   position: relative;
@@ -363,10 +373,6 @@ input[type="radio"].visually-hidden {
   width: 122px;
   padding-right: 28px;
 }
-
-/* .main-header__cart-text--product-add {
-  background-color: #ee3643;
-} */
 
 .main-header__cart-block {
   width: 122px;
@@ -379,7 +385,6 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 12px;
   display: block;
-  /* background-color: red; */
 }
 
 .main-header__cart-text::before {
@@ -410,8 +415,15 @@ input[type="radio"].visually-hidden {
   padding-left: 44px;
 }
 
+.main-header__bookmarks-text:focus,
+.main-header__cart-text:focus {
+  outline: none;
+}
+
 .main-header__bookmarks-text:hover::before,
-.main-header__cart-text:hover::before {
+.main-header__cart-text:hover::before,
+.main-header__bookmarks-text:focus::before,
+.main-header__cart-text:focus::before {
   opacity: 1;
 }
 
@@ -440,7 +452,18 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
+  position: relative;
   background-color: #32425c;
+}
+
+.main-navigation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 940px;
+  height: 5px;
+  background-color: #293449;
 }
 
 .main-navigation__list {
@@ -459,8 +482,10 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.main-navigation__link:hover {
+.main-navigation__link:hover,
+.main-navigation__link:focus {
   background-color: #293449;
+  outline: none;
 }
 
 .main-navigation__link:active {
@@ -472,8 +497,15 @@ input[type="radio"].visually-hidden {
   background-color: #63a63e;
 }
 
-.main-header__buy-block:hover {
+.main-header__buy-block:hover,
+.main-header__buy-block:focus {
   background-color: #5fbb2d;
+}
+
+.main-header__buy-button:focus,
+.main-header__buy-button:focus {
+  background-color: #5fbb2d;
+  outline: none;
 }
 
 .main-header__buy-block:active {
@@ -514,18 +546,7 @@ input[type="radio"].visually-hidden {
   min-height: 123px;
 }
 
-.service-presentation__new-products::after { /* класс обозначающий наличие новых товаров в категории */
-  /* content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 59px;
-  background-image: url("../img/new-flag.png"); */
-}
-
 .presentation-category:nth-child(1),
-/* .presentation-category:nth-child(2), */
 .presentation-category:nth-child(3) {
   margin-bottom: 20px;
 }
@@ -615,8 +636,10 @@ input[type="radio"].visually-hidden {
   border-radius: 3px;
 }
 
-.presentation-category__link:hover {
+.presentation-category__link:hover,
+.presentation-category__link:focus {
   background-color: #cccccc;
+  outline: none;
 }
 
 .presentation-category__link:active {
@@ -659,7 +682,6 @@ input[type="radio"].visually-hidden {
 }
 
 .product-slider__slide-item { /* для расположения изображения блока как фона */
-  /* position: relative; */
   margin: 0 auto;
   width: 576px;
 }
@@ -701,14 +723,12 @@ input[type="radio"].visually-hidden {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff; /*временно */
 }
 
 .product-slider__slide-slogan {
   margin: 0 0 30px 0;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff; /*временно */
 }
 
 .product-slider__slide-link {
@@ -741,6 +761,13 @@ input[type="radio"].visually-hidden {
   height: 40px;
   background: none;
   cursor: pointer;
+  opacity: 0.5;
+}
+
+.product-slider__button:hover,
+.product-slider__button:focus {
+  opacity: 1;
+  outline: 0;
 }
 
 .product-slider__button--prev {
@@ -844,6 +871,7 @@ input[type="radio"].visually-hidden {
   margin: 30px 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -880,23 +908,29 @@ input[type="radio"].visually-hidden {
 }
 
 
-.store-product:hover {
+.store-product:hover,
+.store-product:focus {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+  outline: none;
 }
 
-.store-product:hover .store-product__title {
+.store-product:hover .store-product__title,
+.store-product:focus .store-product__title {
   margin-bottom: 40px;
 }
 
-.store-product:hover .store-product__image  {
+.store-product:hover .store-product__image,
+.store-product:focus .store-product__image  {
   display: none;
 }
 
-.store-product:hover .store-product__product-actions {
+.store-product:hover .store-product__product-actions,
+.store-product:focus .store-product__product-actions {
   display: block;
 }
 
-.store-product:hover .store-product__old-price {
+.store-product:hover .store-product__old-price,
+.store-product:focus .store-product__old-price {
   display: none;
 }
 
@@ -1083,8 +1117,10 @@ input[type="radio"].visually-hidden {
 }
 
 
-.top-makers__item-link:hover {
+.top-makers__item-link:hover,
+.top-makers__item-link:focus {
   box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
+  outline: none;
 }
 
 
@@ -1220,8 +1256,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.services__item:hover:not(.services__item--current) {
+.services__item:hover:not(.services__item--current),
+.services__item:focus:not(.services__item--current) {
   background-color: #293449;
+  outline: none;
 }
 
 .services__item--current {
@@ -1243,6 +1281,8 @@ input[type="radio"].visually-hidden {
 }
 
 .services__item-description {
+  z-index: 1; /* для того, что большой текст не был перекрыт слоем изображения слайда */
+  position: relative;
   margin: 0;
   font-size: 13px;
   line-height: 24px;
@@ -1339,10 +1379,12 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts__modal-open {
-  padding-left: 64px;
-  padding-right: 67px;
+  padding-left: 63px;
+  padding-right: 60px;
   border: none;
   font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   cursor: pointer;
 }
 
@@ -1435,8 +1477,11 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-navigation__link:hover,
-.main-footer__navigation-link:hover {
+.main-footer__navigation-link:hover,
+.footer-navigation__link:focus,
+.main-footer__navigation-link:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 .footer-navigation__link:active,
@@ -1472,8 +1517,10 @@ input[type="radio"].visually-hidden {
   color: #ffd180;
 }
 
-.main-footer__developer-name:hover {
+.main-footer__developer-name:hover,
+.main-footer__developer-name:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 .main-footer__developer-name:active {
@@ -1514,8 +1561,10 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.main-footer__social-link:hover {
+.main-footer__social-link:hover,
+.main-footer__social-link:focus {
   background-color: #ee3643;
+  outline: none;
 }
 
 .main-footer__social-link:active {
@@ -1734,6 +1783,10 @@ input[type="radio"].visually-hidden {
   border-color: red;
 }
 
+.modal--map-location::focus { /* Для скрытия совушки фокуса */
+  outline: 0;
+}
+
 .modal--location-content {
   display: none;
   z-index: 100;
@@ -1836,7 +1889,7 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.main-header__logged-user-list { /* 51px */
+.main-header__logged-user-list {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -1861,6 +1914,18 @@ input[type="radio"].visually-hidden {
   width: 20px;
   height: 18px;
   background-image: url("../img/icon-user.svg");
+  opacity: 0.3;
+}
+
+.main-header__user-login:hover,
+.main-header__user-login:focus {
+  color: #ee3643;
+  outline: none;
+}
+
+.main-header__user-login:hover::before,
+.main-header__user-login:focus::before {
+  opacity: 1;
 }
 
 .main-header__profile-exit {
@@ -1870,15 +1935,24 @@ input[type="radio"].visually-hidden {
   width: 22px;
 }
 
+.main-header__profile-exit:hover,
+.main-header__profile-exit:focus {
+  outline: none;
+}
+
 .main-header__profile-exit::after {
   content: "";
   position: absolute;
   width: 21px;
   height: 17px;
   background-image: url("../img/icon-logout.svg");
+  opacity: 0.3;
 }
 
-
+.main-header__profile-exit:hover::after,
+.main-header__profile-exit:focus::after {
+  opacity: 1;
+}
 
 .main-header__user-login {
   font-size: 21px;
@@ -1926,8 +2000,10 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-header__user-profile-link:hover {
+.main-header__user-profile-link:hover,
+.main-header__user-profile-link:focus {
   color: #ba2732;
+  outline: none;
 }
 
 .main-header__user-profile-link:active {
@@ -1946,8 +2022,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 18px;
   padding: 0;
   padding-top: 23px;
-  /* padding-left: 29px; */
-  font-family: "PTsans", Arial, sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   color: #000000;
@@ -1972,8 +2047,14 @@ input[type="radio"].visually-hidden {
   position: relative;
   margin-right: 17px;
   padding-left: 26px;
+  opacity: 0.5;
 }
 
+.page-header__link:hover,
+.page-header__link:focus {
+  opacity: 1;
+  outline: none;
+}
 
 .page-header__link::before {
   content: "";
@@ -1997,6 +2078,7 @@ input[type="radio"].visually-hidden {
   padding: 32px 0px 28px 30px;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
   background-color: #f2f6f8;
@@ -2017,7 +2099,7 @@ input[type="radio"].visually-hidden {
 .setup-header {
   margin-bottom: 12px;
   padding: 11px 0 8px 18px;
-  font-family: "PTsans", Arial, sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   color: #000000;
@@ -2093,7 +2175,7 @@ input[type="radio"].visually-hidden {
 
 .setup-product__range-output {
   font-size: 17px;
-  font-family: PTSans, Arial, sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   color: #000000;
 }
 /* стилизация поля-позунка */
@@ -2124,7 +2206,7 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   margin: 0; /* сброс изначальных стилей для заголовка группы полей */
   padding: 0; /* сброс изначальных стилей для заголовка группы полей */
   width: 100%; /* сброс изначальных стилей для заголовка группы полей */
-  font-family: "PTsans", Arial, sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -2176,14 +2258,11 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 .setup-product__field-indicator--checkbox {
   width: 27px;
   height: 23px;
-  /* background-image: url("../img/checkbox-off.svg"); */
-  /* background-repeat: no-repeat; */
 }
 
 .setup-product__field-indicator--radio {
   width: 25px;
   height: 25px;
-  /* background-image: url("../img/radio-off.svg"); */
 }
 
 .setup-product__field-indicator--checkbox-off,
@@ -2199,7 +2278,6 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 
 .setup-product__field:checked + .setup-product__field-indicator--checkbox-on,
 .setup-product__field:checked + .setup-product__field-indicator--radio-on {
-  /* background-image: url("../img/checkbox-on.svg"); */
   display: block;
 }
 
@@ -2209,8 +2287,15 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
 }
 
 .setup-product__makers-item:hover  .setup-product__field-indicator,
-.setup-product__charge-item:hover  .setup-product__field-indicator {
+.setup-product__field--makers-field:focus ~  .setup-product__field-indicator,
+.setup-product__charge-item:hover  .setup-product__field-indicator,
+.setup-product__field--charge-field:focus ~ .setup-product__field-indicator {
   fill: #b5b5b5;
+  outline: none; /* нужно разобраться почему не убирается обводка при фокусе */
+}
+
+.setup-product__label-field:focus {
+  background-color: red;
 }
 
 .setup-product__field:disabled ~ .setup-product__field-indicator {
@@ -2253,10 +2338,15 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   border-radius: 2px;
   font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
+  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.setup-product__button-show:focus {
+  outline: 3px solid #e5e5e5a4;
 }
 
 /* стилизация блока с формой */
@@ -2282,11 +2372,13 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   margin-left: 19px;
   margin-right: 139px;
   font-size: 13px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .sort-block__sort-type-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 380px;
@@ -2307,12 +2399,14 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sort-block__sort-type-link:hover {
+.sort-block__sort-type-link:hover,
+.sort-block__sort-type-link:focus {
   border-bottom: 1px solid #ee3643;
   color: rgba(0, 0, 0, 1);
+  outline: none;
 }
 
-.sort-block__sort-type-link:active {
+.sort-block__sort-type-link--active {
   border: none;
   color: #ee3643;
 }
@@ -2329,11 +2423,16 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   height: 10px;
 }
 
-.sort-block__sort-button:hover .sort-block__button-figure {
+.sort-block__sort-button:hover .sort-block__button-figure,
+.sort-block__sort-button:focus .sort-block__button-figure {
   fill: #231f20;
 }
 
-.sort-block__sort-button:active .sort-block__button-figure {
+.sort-block__sort-button:focus {
+  outline: none;
+}
+
+.sort-block__button-active .sort-block__button-figure {
   fill: #ee3643;
 }
 
@@ -2357,27 +2456,6 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   margin-right: 0;
 }
 
-/* .item-card {
-  font-size: 17px;
-  line-height: 18px;
-} */
-
-/* .item-card__product-description {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #000000;
-} */
-
-/* .item-card__old-price {
-  text-decoration: line-through;
-  color: #999999;
-}
-
-.item-card__current-price {
-  background-color: #ee3643;
-} */
-
 .sort-block__pagination {
   font-size: 13px;
 }
@@ -2400,12 +2478,18 @@ body:not(:-moz-handler-blocked) fieldset { /* сброс изначальных 
   color: #000000;
 }
 
-.sort-block__pagination-link:hover {
+.sort-block__pagination-item:focus {
+  outline: none;
+}
+
+.sort-block__pagination-link:hover,
+.sort-block__pagination-link:focus {
   border-color: #bdc6ca;
+  outline: none;
 }
 
 .sort-block__pagination-link--current:hover {
-  border-color: #ee3643;;
+  border-color: #ee3643;
 }
 
 .sort-block__pagination-link:active {
