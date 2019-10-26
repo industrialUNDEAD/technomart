@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/min-style.css">
   </head>
   <body class="catalog-page">
       <header class="main-header">
@@ -150,10 +150,10 @@
               </div>
               <div class="setup-product__range-price-display">
                 <div class="setup-product__range-value setup-product__range-value--min-value">
-                  <span class="setup-product__range-output setup-product__range-output--min-value">0</span>
+                  <input class="setup-product__range-output setup-product__range-output--min-value" type="number" min="20" max="700">
                 </div>
                 <div class="setup-product__range-value setup-product__range-value-max-value">
-                  <span class="setup-product__range-output setup-product__range-output--max-value">30000</span>
+                  <input class="setup-product__range-output setup-product__range-output--max-value" type="number" min="20" max="700">
                 </div>
               </div>
             </fieldset>
@@ -499,8 +499,8 @@
         </div>
       </div>
     </section>
-  <script src="js/authorization.js"></script>
-  <script src="js/product-actions.js"></script>
-  <script src="js/range-input.js"></script>
+  <script src="js/min-authorization.js"></script>
+  <script src="js/min-product-actions.js"></script>
+  <script src="js/min-range-input.js"></script>
   </body>
 </html>

@@ -883,6 +883,7 @@ img { /* универсальное правило для того, что бы 
 
 .top-products__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -891,7 +892,12 @@ img { /* универсальное правило для того, что бы 
 .top-products__item,
 .product-line__product-item {
   margin-right: 20px;
+  margin-bottom: 5px;
   width: 220px;
+}
+
+.top-products__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .store-product {
@@ -1379,12 +1385,13 @@ img { /* универсальное правило для того, что бы 
 }
 
 .contacts__modal-open {
+  margin-bottom: 86px;
   padding-left: 63px;
   padding-right: 60px;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  /* border: none; */
+  /* font-family: inherit; */
+  /* font-size: inherit; */
+  /* line-height: inherit; */
   cursor: pointer;
 }
 
@@ -1545,6 +1552,7 @@ img { /* универсальное правило для того, что бы 
 .main-footer__social-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 131px;
@@ -1783,7 +1791,7 @@ img { /* универсальное правило для того, что бы 
   border-color: red;
 }
 
-.modal--map-location::focus { /* Для скрытия совушки фокуса */
+.modal--map-location:focus { /* Для скрытия совушки фокуса */
   outline: 0;
 }
 
@@ -2174,9 +2182,12 @@ img { /* универсальное правило для того, что бы 
 }
 
 .setup-product__range-output {
+  border: none;
   font-size: 17px;
   font-family: "PTSans", Arial, sans-serif;
+  text-align: center;
   color: #000000;
+  background-color: #f7f3ec;
 }
 /* стилизация поля-позунка */
 
