@@ -1,5 +1,5 @@
 var modalFeedBack = document.querySelector(".modal--feedback");
-var buttonCloseModal = document.querySelector(".modal__button-close");
+var buttonCloseModal = modalFeedBack.querySelector(".modal__button-close");
 var buttonOpenModal = document.querySelector(".contacts__modal-open");
 var feedbackForm = document.querySelector(".modal--feedback__feedback-form");
 var userNameField = document.querySelector(".modal--feedback__input--name-field");
@@ -9,6 +9,7 @@ var allFormInputs = document.querySelectorAll(".modal--feedback__input");
 var isStorageSupport = true;
 var storageName = "";
 var storageMail = "";
+var modalTitle = modalFeedBack.querySelector("h2");
 
   try {
     storageName = localStorage.getItem("name");
@@ -25,12 +26,13 @@ buttonOpenModal.addEventListener("click", function (evt) {
 buttonOpenModal.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 13) {
     evt.preventDefault();
-    openModal();;
+    openModal();
   }
 })
 
 var openModal = function () {
   modalFeedBack.classList.add("overlay-active");
+  document.body.style.overflow = 'hidden';
   if (storageName) {
     userNameField.value = storageName;
     if (!userNameField.value) {
@@ -46,9 +48,11 @@ var openModal = function () {
 };
 
 buttonCloseModal.addEventListener("click", function (evt) {
+  debugger;
   evt.preventDefault();
   modalFeedBack.classList.remove("overlay-active");
-  allFormInputs.classList.remove("modal-error");
+  // allFormInputs.classList.remove("modal-error");
+  document.body.style.overflow = 'auto';
 })
 
 feedbackForm.addEventListener("submit", function (evt) {
@@ -67,6 +71,7 @@ feedbackForm.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
+    document.body.style.overflow = 'auto';
     if (modalFeedBack.classList.contains("overlay-active")) {
       modalFeedBack.classList.remove("overlay-active");
       validationFieldsRemove(allFormInputs);
@@ -91,3 +96,20 @@ var validationFieldsRemove = function (fields) {
   }
   return fields;
 };
+
+buttonCloseModal.addEventListener("keydown", function (KeyboardEvent) {
+  if (KeyboardEvent.keyCode === 9) {
+    modalTitle.focus();
+    if (KeyboardEvent.shiftKey) {
+      userMessageField.focus();
+    }
+  };
+})
+
+userNameField.addEventListener("keydown", function (KeyboardEvent) {
+  if (KeyboardEvent.shiftKey) {
+    if (KeyboardEvent.keyCode === 9) {
+      buttonCloseModal.focus();
+    };
+  };
+})
